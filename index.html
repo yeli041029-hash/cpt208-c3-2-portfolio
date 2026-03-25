@@ -1,38 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RunWise Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrainQuest Portfolio</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #1f2a44;
       line-height: 1.6;
     }
-    h1 {
-      color: #2c3e50;
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto 80px;
+    }
+
+    .hero {
+      margin-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      margin: 0 0 12px;
+      color: #17233c;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 22px;
+      color: #5b6b88;
+      border-left: 5px solid #3b82f6;
+      padding-left: 16px;
+    }
+
+    .section {
+      margin-top: 48px;
+    }
+
+    .section h2 {
+      font-size: 38px;
+      margin: 0 0 18px;
+      color: #17233c;
+      border-bottom: 2px solid #d9e1ee;
+      padding-bottom: 10px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #dfe6f2;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 6px 20px rgba(28, 46, 77, 0.06);
+    }
+
+    .goal-box {
+      font-size: 18px;
+      color: #33415c;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .team-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .persona-grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .member-card,
+    .persona-card {
+      background: #ffffff;
+      border: 1px solid #dfe6f2;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 6px 20px rgba(28, 46, 77, 0.06);
+      text-align: center;
+    }
+
+    .member-avatar,
+    .persona-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 18px;
+      border: 4px solid #edf2fb;
+      background: #eef3fb;
+    }
+
+    .member-card h3,
+    .persona-card h3 {
+      margin: 8px 0 6px;
+      font-size: 22px;
+      color: #1d2b46;
+    }
+
+    .student-id,
+    .persona-subtitle {
+      color: #667892;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .role {
+      color: #3b82f6;
+      font-weight: bold;
+      margin-bottom: 14px;
+      font-size: 17px;
+    }
+
+    .member-card p {
+      font-size: 16px;
+      color: #4b5a75;
+      margin: 0;
+    }
+
+    .persona-card {
+      text-align: left;
+      padding-top: 34px;
+    }
+
+    .persona-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .persona-block {
+      border-top: 1px solid #e3e9f3;
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+
+    .persona-block h4 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      color: #6d7f9a;
+      text-transform: uppercase;
+    }
+
+    .persona-block p {
+      margin: 0;
+      color: #33415c;
+      font-size: 17px;
+    }
+
+    .journey-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(28, 46, 77, 0.06);
+    }
+
+    .journey-table th,
+    .journey-table td {
+      border: 1px solid #dfe6f2;
+      padding: 16px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .journey-table th {
+      background: #edf4ff;
+      color: #17345f;
+      font-size: 16px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .mini-card {
+      background: #ffffff;
+      border: 1px solid #dfe6f2;
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 6px 20px rgba(28, 46, 77, 0.06);
+    }
+
+    .mini-card h3 {
+      margin-top: 0;
+      color: #17233c;
+      font-size: 24px;
+    }
+
+    .mini-card p,
+    .mini-card ul {
+      color: #33415c;
+      font-size: 17px;
+    }
+
+    .mini-card ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .progress-list {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .progress-list li {
+      margin-bottom: 10px;
+      color: #33415c;
+      font-size: 17px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .section h2 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <section class="hero">
+      <h1>TrainQuest</h1>
+      <p>Interaction Design · Discovering Requirements · CPT208 Group C3-2</p>
+    </section>
 
-  <h1>TrainQuest</h1>
+    <section class="section">
+      <h2>Project Goal</h2>
+      <div class="card goal-box">
+        <p>
+          TrainQuest is a web-based gamified training platform designed to help university students
+          build sustainable exercise habits. It supports motivation through daily challenges,
+          rewards, progress tracking, and playful feedback. Our goal is to make training more engaging,
+          accessible, and consistent for users who often struggle to stay active.
+        </p>
+      </div>
+    </section>
 
-  <p><strong>Module:</strong> CPT208 Human-Centric Computing</p>
-  <p><strong>Group:</strong> C3-2</p>
-  <p><strong>Topic:</strong> (C3 Go Trainers)</p>
-  <p><strong>Members:</strong> Ye Li, Tingxian Ren, Yi Cao, Popo Liu</p>
+    <section class="section">
+      <h2>Team Members</h2>
+      <div class="grid team-grid">
+        <div class="member-card">
+          <img class="member-avatar" src="https://via.placeholder.com/110" alt="Member 1">
+          <h3>Ye Li</h3>
+          <div class="student-id">Student ID</div>
+          <div class="role">Front-end Developer</div>
+          <p>Focuses on page layout, interface implementation, and responsive web design.</p>
+        </div>
 
-  <h2>Project Overview</h2>
-  <p>
-    This project explores a playful and engaging interactive system.
-    This portfolio documents our design process, research, prototyping,
-    and evaluation throughout the semester.
-  </p>
+        <div class="member-card">
+          <img class="member-avatar" src="https://via.placeholder.com/110" alt="Member 2">
+          <h3>Tingxian Ren</h3>
+          <div class="student-id">Student ID</div>
+          <div class="role">UX Researcher</div>
+          <p>Responsible for interviews, requirement discovery, and translating insights into design decisions.</p>
+        </div>
 
-  <h2>Current Progress</h2>
-  <p>Week 2: Group formed, topic selected, and portfolio site initialized.</p>
+        <div class="member-card">
+          <img class="member-avatar" src="https://via.placeholder.com/110" alt="Member 3">
+          <h3>Yi Cao</h3>
+          <div class="student-id">Student ID</div>
+          <div class="role">UI Designer</div>
+          <p>Focuses on visual style, wireframes, and interaction flow using prototype tools such as Figma.</p>
+        </div>
 
+        <div class="member-card">
+          <img class="member-avatar" src="https://via.placeholder.com/110" alt="Member 4">
+          <h3>Popo Liu</h3>
+          <div class="student-id">Student ID</div>
+          <div class="role">Back-end Developer</div>
+          <p>Supports data structure design, system logic, and future functional integration.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>User Personas</h2>
+      <div class="grid persona-grid">
+        <div class="persona-card">
+          <div class="persona-header">
+            <img class="persona-avatar" src="https://via.placeholder.com/110" alt="Persona 1">
+            <h3>Zhang Wei</h3>
+            <div class="persona-subtitle">20 · University Student</div>
+          </div>
+
+          <div class="persona-block">
+            <h4>Background</h4>
+            <p>He is a busy student who wants to become healthier but often struggles to maintain a workout routine during the semester.</p>
+          </div>
+
+          <div class="persona-block">
+            <h4>Goals</h4>
+            <p>Wants simple daily workout guidance, visible progress, and encouragement to keep exercising consistently.</p>
+          </div>
+
+          <div class="persona-block">
+            <h4>Pain Points</h4>
+            <p>Does not know what to do each day, loses motivation quickly, and feels that exercise plans are often too demanding.</p>
+          </div>
+
+          <div class="persona-block">
+            <h4>Behaviour</h4>
+            <p>Checks his phone frequently, prefers short and clear tasks, and responds well to rewards and gamified systems.</p>
+          </div>
+        </div>
+
+        <div class="persona-card">
+          <div class="persona-header">
+            <img class="persona-avatar" src="https://via.placeholder.com/110" alt="Persona 2">
+            <h3>Li Fang</h3>
+            <div class="persona-subtitle">21 · Beginner Gym User</div>
+          </div>
+
+          <div class="persona-block">
+            <h4>Background</h4>
+            <p>She has recently started going to the gym and wants a more structured and enjoyable way to continue training.</p>
+          </div>
+
+          <div class="persona-block">
+            <h4>Goals</h4>
+            <p>Wants clear task instructions, motivating feedback, and a sense of achievement after each workout session.</p>
+          </div>
+
+          <div class="persona-block">
+            <h4>Pain Points</h4>
+            <p>Gets bored with repetitive exercise, forgets training details, and finds it hard to stay committed without feedback.</p>
+          </div>
+
+          <div class="persona-block">
+            <h4>Behaviour</h4>
+            <p>Enjoys visual progress tracking, social sharing, and challenge-based interaction that feels playful rather than stressful.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>User Journey</h2>
+      <table class="journey-table">
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>User Action</th>
+            <th>Thought / Feeling</th>
+            <th>Pain Point</th>
+            <th>Design Opportunity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Discovery</td>
+            <td>Wants to start exercising and looks for a simple solution.</td>
+            <td>Hopeful but unsure.</td>
+            <td>Doesn’t know where to begin.</td>
+            <td>Provide a clear onboarding and daily starting point.</td>
+          </tr>
+          <tr>
+            <td>Trying</td>
+            <td>Searches for workout routines and compares options.</td>
+            <td>Curious but confused.</td>
+            <td>Too many choices and no structure.</td>
+            <td>Offer guided daily challenges with simple instructions.</td>
+          </tr>
+          <tr>
+            <td>Using</td>
+            <td>Completes a few training tasks.</td>
+            <td>Motivated at first.</td>
+            <td>Lacks immediate feedback.</td>
+            <td>Add XP, badges, and completion feedback.</td>
+          </tr>
+          <tr>
+            <td>Struggling</td>
+            <td>Starts skipping sessions.</td>
+            <td>Frustrated and unmotivated.</td>
+            <td>Routine becomes boring and easy to abandon.</td>
+            <td>Use streaks, playful prompts, and visible progress.</td>
+          </tr>
+          <tr>
+            <td>Retention</td>
+            <td>Decides whether to continue the habit.</td>
+            <td>Proud if progress is visible.</td>
+            <td>Hard to see long-term improvement.</td>
+            <td>Show weekly summaries and growth milestones.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Problem & Solution</h2>
+      <div class="two-col">
+        <div class="mini-card">
+          <h3>Problem</h3>
+          <p>
+            Many university students want to exercise regularly, but they struggle with low motivation,
+            unclear workout planning, and a lack of immediate feedback. As a result, exercise often feels
+            repetitive, confusing, and difficult to maintain.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Solution</h3>
+          <p>
+            TrainQuest transforms daily exercise into a playful and rewarding experience through
+            daily missions, badges, level systems, streaks, and clear progress tracking.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Current Progress</h2>
+      <div class="mini-card">
+        <ul class="progress-list">
+          <li>Week 2: Group formed, topic selected, and portfolio website initialized.</li>
+          <li>Week 3: Initial project goal, team roles, and user personas drafted.</li>
+          <li>Week 4: User journey map and requirement discovery in progress.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
