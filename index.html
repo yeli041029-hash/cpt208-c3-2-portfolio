@@ -218,33 +218,6 @@
       line-height: 1.6;
     }
 
-    .timeline {
-      display: grid;
-      gap: 18px;
-    }
-
-    .timeline-step {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 20px 22px;
-    }
-
-    .timeline-step h3 {
-      margin: 0 0 8px;
-      color: #fff;
-      font-size: 22px;
-    }
-
-    .timeline-step p {
-      margin: 4px 0;
-      color: var(--muted);
-    }
-
-    .timeline-step strong {
-      color: #ffffff;
-    }
-
     .team-card {
       text-align: center;
     }
@@ -298,30 +271,19 @@
       margin-bottom: 24px;
     }
 
-    .journey-placeholder-box {
-      border: 2px dashed rgba(255,255,255,0.18);
-      border-radius: 24px;
-      min-height: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: var(--muted);
-      text-align: center;
-      padding: 28px;
-      background: rgba(255,255,255,0.03);
-    }
-
-    .journey-placeholder-box p {
-      margin: 8px 0;
-    }
-
     .journey-map-image {
       width: 100%;
       border-radius: 22px;
       display: block;
       box-shadow: 0 16px 40px rgba(0,0,0,0.20);
       border: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    .journey-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 15px;
     }
 
     .research-grid {
@@ -617,62 +579,77 @@
     <section class="section">
       <h2>Experience Journey</h2>
       <p class="section-intro">
-        This section documents the user journey for our target users. The map is used to identify
-        where motivation drops, where confusion appears, and where playful design opportunities
-        can improve the overall exercise experience.
+        This section visualises Rachel’s fitness journey from initial motivation to long-term continuation.
+        It highlights how confusion, anxiety, and loss of progress visibility affect behaviour, and how
+        TrainQuest can intervene with structure, guidance, rewards, and progress tracking.
       </p>
 
       <div class="dark-card">
         <h3>Journey Map Overview</h3>
         <p>
-          Our journey map will be built around a specific persona and scenario. It will include
-          journey stages, user actions, thoughts, emotions, pain points, and opportunities for design
-          intervention.
+          The journey map shows five stages of the beginner fitness experience: discovery, evaluation,
+          commitment, onboarding, and long-term continuation. Across these stages, the user moves from
+          curiosity and motivation to confusion and anxiety, before either regaining satisfaction or
+          dropping off. This map helps us identify concrete moments where the system should reduce friction,
+          provide guidance, and reinforce progress.
         </p>
       </div>
 
       <div class="journey-image-placeholder">
-        <div class="journey-placeholder-box">
-          <p><strong>Journey Map Image Placeholder</strong></p>
-          <p>
-            Insert the final user journey map here later.<br>
-            Suggested format: exported PNG / JPG from Figma, Miro, or other design tools.
-          </p>
-        </div>
+        <img class="journey-map-image"
+             src="https://raw.githubusercontent.com/yeli041029-hash/cpt208-c3-2-portfolio/main/journey-map.png"
+             alt="TrainQuest user journey map">
+        <p class="journey-note">
+          Journey map created in Miro to document Rachel’s actions, touchpoints, emotional changes,
+          pain points, and corresponding design opportunities.
+        </p>
       </div>
 
       <div class="cards two-col">
         <div class="card">
           <h3>Actor & Scenario</h3>
           <p>
-            We will define who the journey map is about, what the user is trying to achieve,
-            and under what context the interaction happens.
+            The journey focuses on Rachel, a beginner university student who wants to exercise more
+            regularly but struggles with uncertainty, lack of guidance, and weak long-term motivation.
           </p>
         </div>
 
         <div class="card">
           <h3>Stages</h3>
           <p>
-            We will map the journey into chronological phases such as intention, exploration,
-            first use, friction, and retention.
+            The journey moves through discovery, evaluation, commitment, onboarding, and long-term
+            continuation, showing how user expectations and barriers change over time.
           </p>
         </div>
 
         <div class="card">
           <h3>Thoughts & Emotions</h3>
           <p>
-            We will capture how users think and feel throughout the process, especially where
-            uncertainty, frustration, or motivation changes most clearly.
+            Rachel begins curious and motivated, becomes confused when faced with too many choices,
+            feels hopeful again when committing, then anxious during real exercise, and only feels
+            satisfied when she receives clear support and visible progress.
           </p>
         </div>
 
         <div class="card">
           <h3>Pain Points & Opportunities</h3>
           <p>
-            We will identify the main barriers in the exercise journey and translate them into
-            actionable design opportunities for TrainQuest.
+            The main barriers are unclear starting points, no simple plan, uncertainty about movement,
+            and difficulty seeing progress. These directly inform TrainQuest’s use of daily quests,
+            guided instruction, progress tracking, streaks, and rewards.
           </p>
         </div>
+      </div>
+
+      <div class="dark-card" style="margin-top: 22px;">
+        <h3>Journey Highlights</h3>
+        <ul class="mini-list">
+          <li><strong>Discovery:</strong> Users are interested in improving fitness, but need a clear and immediate starting point.</li>
+          <li><strong>Evaluation:</strong> Too many choices and no simple plan create confusion and slow commitment.</li>
+          <li><strong>Onboarding:</strong> Anxiety increases when beginners are unsure whether they are exercising correctly.</li>
+          <li><strong>Long-term continuation:</strong> Lack of visible progress and weak motivation create drop-off risk.</li>
+          <li><strong>Design implication:</strong> TrainQuest should reduce decision complexity, support correct exercise learning, and reward consistency over time.</li>
+        </ul>
       </div>
     </section>
 
@@ -942,8 +919,8 @@
         <h3>Planned Progress</h3>
         <ul class="mini-list">
           <li>Finalize academic references and complete the literature review section.</li>
-          <li>Insert the final journey map image into the portfolio.</li>
-          <li>Refine the prototype screens based on questionnaire findings.</li>
+          <li>Refine and export the final journey map for the portfolio.</li>
+          <li>Translate journey findings into concrete interface flows and screen requirements.</li>
           <li>Create low-fidelity and medium-fidelity prototype screens in Figma.</li>
           <li>Test the daily quest flow with peers and document design decisions in the portfolio.</li>
         </ul>
