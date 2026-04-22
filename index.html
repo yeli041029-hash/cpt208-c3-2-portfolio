@@ -452,6 +452,22 @@
       line-height: 1.7;
     }
 
+    .multi-images {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    
+    .multi-images img {
+      width: 120px;
+      border-radius: 10px;
+    }
+    
+    .multi-images.grid-3 img {
+      width: 100px;
+    }
+
     @media (max-width: 900px) {
       .chart-grid {
         grid-template-columns: 1fr;
@@ -1096,7 +1112,10 @@
     
         <!-- Task -->
         <div class="screen-card">
-          <img src="images/task.png" alt="Task Screen">
+          <div class="multi-images">
+            <img src="images/task1.png" alt="Task Screen 1">
+            <img src="images/task2.png" alt="Task Screen 2">
+          </div>
           <div class="screen-info">
             <h4>Task Management</h4>
             <p>
@@ -1108,7 +1127,10 @@
     
         <!-- Reward -->
         <div class="screen-card">
-          <img src="images/reward.png" alt="Reward Screen">
+          <div class="multi-images">
+            <img src="images/reward1.png" alt="Reward Screen 1">
+            <img src="images/reward2.png" alt="Reward Screen 2">
+          </div>
           <div class="screen-info">
             <h4>Reward System</h4>
             <p>
@@ -1132,7 +1154,17 @@
     
         <!-- Profile -->
         <div class="screen-card">
-          <img src="images/me.png" alt="Profile Screen">
+          <div class="multi-images grid-3">
+            <img src="images/me1.png">
+            <img src="images/me2.png">
+            <img src="images/me3.png">
+            <img src="images/me4.png">
+            <img src="images/me5.png">
+            <img src="images/me6.png">
+            <img src="images/me7.png">
+            <img src="images/me8.png">
+            <img src="images/me9.png">
+          </div>
           <div class="screen-info">
             <h4>User Profile</h4>
             <p>
