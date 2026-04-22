@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrainQuest Portfolio</title>
+  <title>PandaFit Portfolio</title>
   <style>
     * { box-sizing: border-box; }
 
@@ -420,6 +420,37 @@
       color: inherit;
     }
 
+    .screen-card {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-top: 24px;
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+    }
+    
+    .screen-card img {
+      width: 180px;
+      border-radius: 12px;
+    }
+    
+    .screen-info {
+      flex: 1;
+    }
+    
+    .screen-info h4 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: #ffffff;
+    }
+    
+    .screen-info p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
     @media (max-width: 900px) {
       .chart-grid {
         grid-template-columns: 1fr;
@@ -438,7 +469,7 @@
 
     <section class="hero">
       <div class="tag">CPT208 · Process Portfolio · Group C3-2</div>
-      <h1>TrainQuest</h1>
+      <h1>PandaFit</h1>
       <p class="subtitle">
         A playful training companion for university students who want to build exercise habits
         through small daily missions, visible progress, and motivating rewards.
@@ -493,7 +524,7 @@
       <p class="section-intro">
         Many students want to exercise more regularly, but they face three recurring barriers:
         unclear starting points, weak short-term motivation, and poor visibility of progress.
-        TrainQuest explores how playful interaction design can reduce those barriers.
+        PandaFit explores how playful interaction design can reduce those barriers.
       </p>
 
       <div class="cards three-col">
@@ -629,7 +660,7 @@
       <p class="section-intro">
         This section visualises Rachel’s fitness journey from initial motivation to long-term continuation.
         It highlights how confusion, anxiety, and loss of progress visibility affect behaviour, and how
-        TrainQuest can intervene with structure, guidance, rewards, and progress tracking.
+        PandaFit can intervene with structure, guidance, rewards, and progress tracking.
       </p>
 
       <div class="dark-card">
@@ -646,7 +677,7 @@
       <div class="journey-image-placeholder">
         <img class="journey-map-image"
              src="https://raw.githubusercontent.com/yeli041029-hash/cpt208-c3-2-portfolio/main/journey-map.png"
-             alt="TrainQuest user journey map">
+             alt="PandaFit user journey map">
         <p class="journey-note">
           Journey map created in Miro to document Rachel’s actions, touchpoints, emotional changes,
           pain points, and corresponding design opportunities.
@@ -683,7 +714,7 @@
           <h3>Pain Points & Opportunities</h3>
           <p>
             The main barriers are unclear starting points, no simple plan, uncertainty about movement,
-            and difficulty seeing progress. These directly inform TrainQuest’s use of daily quests,
+            and difficulty seeing progress. These directly inform PandaFit’s use of daily quests,
             guided instruction, progress tracking, streaks, and rewards.
           </p>
         </div>
@@ -696,7 +727,7 @@
           <li><strong>Evaluation:</strong> Too many choices and no simple plan create confusion and slow commitment.</li>
           <li><strong>Onboarding:</strong> Anxiety increases when beginners are unsure whether they are exercising correctly.</li>
           <li><strong>Long-term continuation:</strong> Lack of visible progress and weak motivation create drop-off risk.</li>
-          <li><strong>Design implication:</strong> TrainQuest should reduce decision complexity, support correct exercise learning, and reward consistency over time.</li>
+          <li><strong>Design implication:</strong> PandaFit should reduce decision complexity, support correct exercise learning, and reward consistency over time.</li>
         </ul>
       </div>
     </section>
@@ -725,35 +756,35 @@
           <h3>Paper 1</h3>
           <p><strong>Title:</strong> Evaluating the Effectiveness of Gamification on Physical Activity: Systematic Review and Meta-analysis of Randomized Controlled Trials</p>
           <p><strong>Main Idea:</strong> This meta-analysis found that gamified interventions have a statistically significant positive effect on physical activity, with effects that can persist beyond the intervention period.</p>
-          <p><strong>Relevance to TrainQuest:</strong> This directly supports our decision to include XP, badges, and quest-based interaction in TrainQuest to improve motivation and sustained engagement.</p>
+          <p><strong>Relevance to PandaFit:</strong> This directly supports our decision to include XP, badges, and quest-based interaction in PandaFit to improve motivation and sustained engagement.</p>
         </div>
 
         <div class="research-paper-card">
           <h3>Paper 2</h3>
           <p><strong>Title:</strong> How Are Habits Formed: Modelling Habit Formation in the Real World</p>
           <p><strong>Main Idea:</strong> The study shows that repeated behaviours performed in a stable context become more automatic over time, supporting the role of small and regular actions in habit formation.</p>
-          <p><strong>Relevance to TrainQuest:</strong> This supports our design choice of short daily quests, because small repeated training actions are more likely to help users build lasting exercise habits.</p>
+          <p><strong>Relevance to PandaFit:</strong> This supports our design choice of short daily quests, because small repeated training actions are more likely to help users build lasting exercise habits.</p>
         </div>
 
         <div class="research-paper-card">
           <h3>Paper 3</h3>
           <p><strong>Title:</strong> The Use of Self-Monitoring and Technology to Increase Physical Activity: A Review of the Literature</p>
           <p><strong>Main Idea:</strong> This review concludes that self-monitoring, especially when supported by digital technology, is frequently associated with increased physical activity and better behaviour change outcomes.</p>
-          <p><strong>Relevance to TrainQuest:</strong> This justifies including progress dashboards, streaks, and visible performance summaries as core parts of the TrainQuest experience.</p>
+          <p><strong>Relevance to PandaFit:</strong> This justifies including progress dashboards, streaks, and visible performance summaries as core parts of the PandaFit experience.</p>
         </div>
 
         <div class="research-paper-card">
           <h3>Paper 4</h3>
           <p><strong>Title:</strong> Barriers and Facilitators to Physical Activity for Young Adult Women: A Systematic Review and Thematic Synthesis of Qualitative Literature</p>
           <p><strong>Main Idea:</strong> This review highlights that physical activity barriers in young adults are complex and include time pressure, social influences, support, confidence, and environmental constraints.</p>
-          <p><strong>Relevance to TrainQuest:</strong> These findings reinforce our need to design a low-pressure, beginner-friendly system that reduces confusion, supports continuity, and offers practical structure for regular exercise.</p>
+          <p><strong>Relevance to PandaFit:</strong> These findings reinforce our need to design a low-pressure, beginner-friendly system that reduces confusion, supports continuity, and offers practical structure for regular exercise.</p>
         </div>
 
         <div class="research-paper-card">
           <h3>Paper 5</h3>
           <p><strong>Title:</strong> Potential Associations Between Behavior Change Techniques and Engagement With Mobile Health Apps: A Systematic Review</p>
           <p><strong>Main Idea:</strong> This review found repeated evidence linking goal setting, self-monitoring, feedback, prompts/cues, rewards, and social support to stronger engagement in mobile health apps.</p>
-          <p><strong>Relevance to TrainQuest:</strong> This supports the combination of daily goals, feedback loops, reminders, rewards, and progress tracking in TrainQuest as evidence-based strategies for maintaining user engagement.</p>
+          <p><strong>Relevance to PandaFit:</strong> This supports the combination of daily goals, feedback loops, reminders, rewards, and progress tracking in PandaFit as evidence-based strategies for maintaining user engagement.</p>
         </div>
       </div>
     </section>
@@ -782,7 +813,7 @@
           <h3>Participants</h3>
           <p>
             77 valid responses were collected, mainly from university students and beginner fitness users.
-            Most respondents were aged 18–35, which matches the primary target audience of TrainQuest.
+            Most respondents were aged 18–35, which matches the primary target audience of PandaFit.
           </p>
         </div>
 
@@ -822,7 +853,7 @@
 
         <div class="card">
           <h3>Finding 4</h3>
-          <p>90.91% want to track progress and 72.73% support gamification, which strongly supports the use of progress tracking and reward systems in TrainQuest.</p>
+          <p>90.91% want to track progress and 72.73% support gamification, which strongly supports the use of progress tracking and reward systems in PandaFit.</p>
         </div>
       </div>
     </section>
@@ -846,7 +877,7 @@
           <p class="chart-note">
             This chart shows that the most common training frustrations are having no clear plan (36.36%)
             and finding it hard to track progress (28.57%). This supports our decision to prioritise
-            structured daily quests and visible progress features in TrainQuest.
+            structured daily quests and visible progress features in PandaFit.
           </p>
         </div>
 
@@ -860,7 +891,7 @@
           <p class="chart-note">
             This chart shows that 90.91% of respondents want to track their progress. It suggests that
             progress visualisation is not optional, but a core requirement for the system. Therefore,
-            TrainQuest should include streaks, progress summaries, and level-based growth feedback.
+            PandaFit should include streaks, progress summaries, and level-based growth feedback.
           </p>
         </div>
       </div>
@@ -870,7 +901,7 @@
       <h2>Key Insights from Research</h2>
       <p class="section-intro">
         Based on the questionnaire results, we extracted a set of research-based insights that
-        directly inform the design of TrainQuest.
+        directly inform the design of PandaFit.
       </p>
 
       <div class="dark-card">
@@ -895,7 +926,7 @@
         <div class="card">
           <h3>Opportunity 1 · Reduce Starting Friction</h3>
           <p>
-            Instead of asking users to create a full training plan, TrainQuest should immediately
+            Instead of asking users to create a full training plan, PandaFit should immediately
             present one recommended “Today’s Quest” so users can begin without overthinking.
           </p>
         </div>
@@ -919,7 +950,7 @@
         <div class="card">
           <h3>Opportunity 4 · Support Correct Exercise Learning</h3>
           <p>
-            Since many respondents want exercise demonstrations, TrainQuest should include simple guidance,
+            Since many respondents want exercise demonstrations, PandaFit should include simple guidance,
             video-based examples, or clear task instructions to support beginners and reduce uncertainty.
           </p>
         </div>
@@ -1040,36 +1071,76 @@
 </section>
 
     <!-- NEW -->
-    <section class="section">
+   <section class="section">
       <h2>Prototype Screens & Interface Mapping</h2>
-      <p class="section-intro">
-        This section maps interface screens to user pain points, design opportunities, and interaction goals.
-      </p>
-
-      <div class="cards two-col">
-        <div class="card">
-          <h3>Screen 1</h3>
-          <p>[Placeholder for screen image]</p>
-          <p>[Placeholder for related user need / pain point / design goal]</p>
+    
+      <div class="dark-card">
+        <h3>Overview</h3>
+        <p>
+          This section presents the key interface screens of the PandaBurn application prototype.
+          Each screen demonstrates a specific functional module and its role within the overall system.
+        </p>
+    
+        <!-- Home -->
+        <div class="screen-card">
+          <img src="images/home.png" alt="Home Screen">
+          <div class="screen-info">
+            <h4>Home Screen</h4>
+            <p>
+              The Home screen provides an overview of the user's daily progress, including weekly
+              sign-in status, total check-ins, experience progress, and quick access to tasks.
+            </p>
+          </div>
         </div>
-
-        <div class="card">
-          <h3>Screen 2</h3>
-          <p>[Placeholder for screen image]</p>
-          <p>[Placeholder for related user need / pain point / design goal]</p>
+    
+        <!-- Task -->
+        <div class="screen-card">
+          <img src="images/task.png" alt="Task Screen">
+          <div class="screen-info">
+            <h4>Task Management</h4>
+            <p>
+              Users can manage daily tasks and projects, including adding, viewing, and deleting records.
+              The interface supports switching between different task categories.
+            </p>
+          </div>
         </div>
-
-        <div class="card">
-          <h3>Screen 3</h3>
-          <p>[Placeholder for screen image]</p>
-          <p>[Placeholder for related user need / pain point / design goal]</p>
+    
+        <!-- Reward -->
+        <div class="screen-card">
+          <img src="images/reward.png" alt="Reward Screen">
+          <div class="screen-info">
+            <h4>Reward System</h4>
+            <p>
+              This screen visualizes user progress through levels and experience points.
+              The mascot evolves as users complete tasks, enhancing motivation.
+            </p>
+          </div>
         </div>
-
-        <div class="card">
-          <h3>Screen 4</h3>
-          <p>[Placeholder for screen image]</p>
-          <p>[Placeholder for related user need / pain point / design goal]</p>
+    
+        <!-- Growth -->
+        <div class="screen-card">
+          <img src="images/grow.png" alt="Growth Screen">
+          <div class="screen-info">
+            <h4>Growth Tracking</h4>
+            <p>
+              The Growth page tracks activity trends such as frequency, duration, and streaks,
+              supported by visual charts and progress indicators.
+            </p>
+          </div>
         </div>
+    
+        <!-- Profile -->
+        <div class="screen-card">
+          <img src="images/me.png" alt="Profile Screen">
+          <div class="screen-info">
+            <h4>User Profile</h4>
+            <p>
+              The Profile page provides account information, settings, language switching,
+              membership options, and access to support features.
+            </p>
+          </div>
+        </div>
+    
       </div>
     </section>
 
@@ -1301,7 +1372,7 @@
           <img class="member-avatar" src="https://raw.githubusercontent.com/yeli041029-hash/cpt208-c3-2-portfolio/main/cy.jpg" alt="Yi Cao">
           <h3>Yi Cao</h3>
           <div class="member-role">UI/UX Designer</div>
-          <p>Designs the visual style and user interface of TrainQuest. Focuses on usability, visual hierarchy, and consistency across the system, including journey mapping and prototype design.</p>
+          <p>Designs the visual style and user interface of PandaFit. Focuses on usability, visual hierarchy, and consistency across the system, including journey mapping and prototype design.</p>
         </div>
 
         <div class="card team-card">
