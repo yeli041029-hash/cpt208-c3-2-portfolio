@@ -399,6 +399,27 @@
       line-height: 1.6;
     }
 
+    .placeholder-box {
+      min-height: 180px;
+      border: 2px dashed rgba(255,255,255,0.18);
+      border-radius: 20px;
+      padding: 22px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .placeholder-box.light {
+      background: var(--card);
+      color: #667892;
+      border: 2px dashed rgba(24,37,61,0.12);
+    }
+
+    .placeholder-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: inherit;
+    }
+
     @media (max-width: 900px) {
       .chart-grid {
         grid-template-columns: 1fr;
@@ -438,6 +459,31 @@
             Discovering requirements through personas, journey mapping, academic research,
             and questionnaire-based evidence about student motivation and exercise barriers.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW -->
+    <section class="section">
+      <h2>Quick Access</h2>
+      <p class="section-intro">
+        This section provides direct access to the poster, portfolio, demo, and presentation support materials.
+      </p>
+
+      <div class="cards three-col">
+        <div class="card">
+          <h3>Poster Link / QR</h3>
+          <p>[Placeholder for poster PDF link or QR code]</p>
+        </div>
+
+        <div class="card">
+          <h3>Portfolio Link / QR</h3>
+          <p>[Placeholder for portfolio link or QR code]</p>
+        </div>
+
+        <div class="card">
+          <h3>Demo Link / QR</h3>
+          <p>[Placeholder for demo link or QR code]</p>
         </div>
       </div>
     </section>
@@ -903,6 +949,140 @@
       </div>
     </section>
 
+    <!-- NEW -->
+    <section class="section">
+      <h2>Prototype Progress</h2>
+      <p class="section-intro">
+        This section documents what has already been prototyped and what remains under development.
+      </p>
+
+      <div class="cards three-col">
+        <div class="card">
+          <h3>Low-Fidelity Prototype</h3>
+          <p>[Placeholder for low-fidelity prototype status]</p>
+        </div>
+
+        <div class="card">
+          <h3>Mid-/High-Fidelity Prototype</h3>
+          <p>[Placeholder for current interface prototype status]</p>
+        </div>
+
+        <div class="card">
+          <h3>Functional Demo Status</h3>
+          <p>[Placeholder for what currently works in the demo]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW -->
+    <section class="section">
+      <h2>Current Build Status</h2>
+      <div class="dark-card">
+        <h3>System Development Overview</h3>
+        <ul class="mini-list">
+          <li>[Placeholder for frontend progress]</li>
+          <li>[Placeholder for backend progress]</li>
+          <li>[Placeholder for integrated features]</li>
+          <li>[Placeholder for unfinished features]</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- NEW -->
+    <section class="section">
+      <h2>Prototype Screens & Interface Mapping</h2>
+      <p class="section-intro">
+        This section maps interface screens to user pain points, design opportunities, and interaction goals.
+      </p>
+
+      <div class="cards two-col">
+        <div class="card">
+          <h3>Screen 1</h3>
+          <p>[Placeholder for screen image]</p>
+          <p>[Placeholder for related user need / pain point / design goal]</p>
+        </div>
+
+        <div class="card">
+          <h3>Screen 2</h3>
+          <p>[Placeholder for screen image]</p>
+          <p>[Placeholder for related user need / pain point / design goal]</p>
+        </div>
+
+        <div class="card">
+          <h3>Screen 3</h3>
+          <p>[Placeholder for screen image]</p>
+          <p>[Placeholder for related user need / pain point / design goal]</p>
+        </div>
+
+        <div class="card">
+          <h3>Screen 4</h3>
+          <p>[Placeholder for screen image]</p>
+          <p>[Placeholder for related user need / pain point / design goal]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW -->
+    <section class="section">
+      <h2>Design Decisions</h2>
+      <p class="section-intro">
+        This section explains how key research findings were translated into interface and interaction decisions.
+      </p>
+
+      <div class="cards two-col">
+        <div class="card">
+          <h3>Decision 1</h3>
+          <p>[Placeholder for research finding]</p>
+          <p>[Placeholder for design decision]</p>
+          <p>[Placeholder for expected user benefit]</p>
+        </div>
+
+        <div class="card">
+          <h3>Decision 2</h3>
+          <p>[Placeholder for research finding]</p>
+          <p>[Placeholder for design decision]</p>
+          <p>[Placeholder for expected user benefit]</p>
+        </div>
+
+        <div class="card">
+          <h3>Decision 3</h3>
+          <p>[Placeholder for research finding]</p>
+          <p>[Placeholder for design decision]</p>
+          <p>[Placeholder for expected user benefit]</p>
+        </div>
+
+        <div class="card">
+          <h3>Decision 4</h3>
+          <p>[Placeholder for research finding]</p>
+          <p>[Placeholder for design decision]</p>
+          <p>[Placeholder for expected user benefit]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW -->
+    <section class="section">
+      <h2>Design Alternatives</h2>
+      <p class="section-intro">
+        This section records alternative concepts considered during design and explains why the current direction was selected.
+      </p>
+
+      <div class="cards two-col">
+        <div class="card">
+          <h3>Alternative A</h3>
+          <p>[Placeholder for alternative concept]</p>
+          <p>[Placeholder for advantages and limitations]</p>
+        </div>
+
+        <div class="card">
+          <h3>Alternative B</h3>
+          <p>[Placeholder for alternative concept]</p>
+          <p>[Placeholder for advantages and limitations]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OLD SECTION KEPT -->
     <section class="section">
       <h2>Prototype Roadmap</h2>
       <div class="dark-card">
@@ -912,6 +1092,84 @@
           <li>Challenge completion flow with feedback and rewards.</li>
           <li>Progress page with streaks, levels, and achievement milestones.</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- NEW -->
+    <section class="section">
+      <h2>Evaluation Plan</h2>
+      <p class="section-intro">
+        This section outlines how the current prototype and demo will be evaluated.
+      </p>
+
+      <div class="cards two-col">
+        <div class="card">
+          <h3>Evaluation Method</h3>
+          <p>[Placeholder for heuristic evaluation / peer testing / interview / questionnaire plan]</p>
+        </div>
+
+        <div class="card">
+          <h3>Evaluation Tasks</h3>
+          <p>[Placeholder for tasks users will complete during testing]</p>
+        </div>
+
+        <div class="card">
+          <h3>Participants</h3>
+          <p>[Placeholder for who will test the prototype]</p>
+        </div>
+
+        <div class="card">
+          <h3>Measures / Questions</h3>
+          <p>[Placeholder for what you will observe or ask]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW -->
+    <section class="section">
+      <h2>Early Testing Notes</h2>
+      <div class="dark-card">
+        <h3>Initial Feedback and Issues</h3>
+        <ul class="mini-list">
+          <li>[Placeholder for observed issue 1]</li>
+          <li>[Placeholder for observed issue 2]</li>
+          <li>[Placeholder for observed issue 3]</li>
+          <li>[Placeholder for planned design improvement]</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- NEW -->
+    <section class="section">
+      <h2>Accessibility & Inclusiveness</h2>
+      <p class="section-intro">
+        This section explains how the system considers usability, accessibility, and beginner-friendly design.
+      </p>
+
+      <div class="cards three-col">
+        <div class="card">
+          <h3>Accessibility Consideration 1</h3>
+          <p>[Placeholder]</p>
+        </div>
+
+        <div class="card">
+          <h3>Accessibility Consideration 2</h3>
+          <p>[Placeholder]</p>
+        </div>
+
+        <div class="card">
+          <h3>Inclusiveness Consideration</h3>
+          <p>[Placeholder]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW -->
+    <section class="section">
+      <h2>Ethics Note</h2>
+      <div class="dark-card">
+        <h3>Research Ethics and Data Collection</h3>
+        <p>[Placeholder for questionnaire ethics / anonymity / consent / module ethics guidance note]</p>
       </div>
     </section>
 
@@ -926,6 +1184,26 @@
           <li>Create low-fidelity and medium-fidelity prototype screens in Figma.</li>
           <li>Test the daily quest flow with peers and document design decisions in the portfolio.</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- NEW -->
+    <section class="section">
+      <h2>Risks & Next Iteration</h2>
+      <p class="section-intro">
+        This section records current limitations and the next iteration priorities after Week 8.
+      </p>
+
+      <div class="cards two-col">
+        <div class="card">
+          <h3>Current Risks</h3>
+          <p>[Placeholder for technical / design / usability risks]</p>
+        </div>
+
+        <div class="card">
+          <h3>Next Iteration Priorities</h3>
+          <p>[Placeholder for what will be improved next]</p>
+        </div>
       </div>
     </section>
 
@@ -989,6 +1267,36 @@
           Each team member contributes across multiple stages of the design process, from research and
           ideation to prototyping, implementation, and system planning.
         </p>
+      </div>
+    </section>
+
+    <!-- NEW -->
+    <section class="section">
+      <h2>Team Timeline / Work Log</h2>
+      <p class="section-intro">
+        This section records weekly progress, responsibilities, and key development milestones.
+      </p>
+
+      <div class="cards two-col">
+        <div class="card">
+          <h3>Week Log Entry 1</h3>
+          <p>[Placeholder for completed work]</p>
+        </div>
+
+        <div class="card">
+          <h3>Week Log Entry 2</h3>
+          <p>[Placeholder for completed work]</p>
+        </div>
+
+        <div class="card">
+          <h3>Week Log Entry 3</h3>
+          <p>[Placeholder for completed work]</p>
+        </div>
+
+        <div class="card">
+          <h3>Week Log Entry 4</h3>
+          <p>[Placeholder for completed work]</p>
+        </div>
       </div>
     </section>
 
