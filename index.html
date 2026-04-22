@@ -468,6 +468,64 @@
       width: 100px;
     }
 
+    .screen-card.profile-card {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    
+    .profile-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    
+    .profile-gallery img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+    }
+    
+    .profile-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .profile-text h4 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+    
+    .profile-text p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 16px;
+      word-break: normal;
+      overflow-wrap: break-word;
+    }
+    
+    @media (max-width: 1100px) {
+      .screen-card.profile-card {
+        grid-template-columns: 1fr;
+      }
+    
+      .profile-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    
+    @media (max-width: 700px) {
+      .profile-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 900px) {
       .chart-grid {
         grid-template-columns: 1fr;
@@ -1153,23 +1211,27 @@
         </div>
     
         <!-- Profile -->
-        <div class="screen-card">
-          <div class="multi-images grid-3">
-            <img src="images/me1.png">
-            <img src="images/me2.png">
-            <img src="images/me3.png">
-            <img src="images/me4.png">
-            <img src="images/me5.png">
-            <img src="images/me6.png">
-            <img src="images/me7.png">
-            <img src="images/me8.png">
-            <img src="images/me9.png">
+       <div class="screen-card profile-card">
+          <div class="profile-gallery">
+            <img src="images/me1.png" alt="User Profile Screen 1">
+            <img src="images/me2.png" alt="User Profile Screen 2">
+            <img src="images/me3.png" alt="User Profile Screen 3">
+            <img src="images/me4.png" alt="User Profile Screen 4">
+            <img src="images/me5.png" alt="User Profile Screen 5">
+            <img src="images/me6.png" alt="User Profile Screen 6">
+            <img src="images/me7.png" alt="User Profile Screen 7">
+            <img src="images/me8.png" alt="User Profile Screen 8">
+            <img src="images/me9.png" alt="User Profile Screen 9">
           </div>
-          <div class="screen-info">
+        
+          <div class="profile-text">
             <h4>User Profile</h4>
             <p>
-              The Profile page provides account information, settings, language switching,
-              membership options, and access to support features.
+              The Profile module provides account information, personal statistics, settings,
+              language switching, premium membership options, security controls, support pages,
+              and additional profile-related features. Together, these screens extend the system
+              beyond task completion and reward feedback, giving users a stronger sense of account
+              ownership, personalization, and long-term engagement.
             </p>
           </div>
         </div>
