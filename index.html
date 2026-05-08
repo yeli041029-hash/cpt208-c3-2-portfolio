@@ -1136,6 +1136,211 @@
   }
 }
 
+    .iteration-section {
+  margin-top: 72px;
+}
+
+.iteration-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  padding: 24px 28px;
+  margin: 32px 0 40px;
+}
+
+.iteration-note h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+.iteration-note p {
+  margin: 0;
+  line-height: 1.7;
+  color: #c7d2e8;
+}
+
+.iteration-block {
+  margin-bottom: 56px;
+}
+
+.iteration-header {
+  margin-bottom: 28px;
+}
+
+.iteration-tag {
+  display: inline-block;
+  padding: 7px 14px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: #e8f3ff;
+  color: #1f4fd8;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.iteration-header h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 1.45rem;
+}
+
+.iteration-header p {
+  max-width: 980px;
+  margin: 0;
+  color: #c7d2e8;
+  line-height: 1.75;
+}
+
+.before-after-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.before-after-card {
+  background: #f8fafc;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.screenshot-placeholder {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.before-placeholder {
+  background:
+    linear-gradient(135deg, rgba(239, 68, 68, 0.06), rgba(249, 115, 22, 0.06)),
+    repeating-linear-gradient(
+      45deg,
+      #f8fafc,
+      #f8fafc 14px,
+      #edf2f7 14px,
+      #edf2f7 28px
+    );
+}
+
+.after-placeholder {
+  background:
+    linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(31, 79, 216, 0.06)),
+    repeating-linear-gradient(
+      -45deg,
+      #f8fafc,
+      #f8fafc 14px,
+      #edf2f7 14px,
+      #edf2f7 28px
+    );
+}
+
+.screenshot-label {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1f2937;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.screenshot-placeholder p {
+  margin: 0 0 6px;
+  font-weight: 800;
+  color: #334155;
+}
+
+.screenshot-placeholder small {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.screenshot-content {
+  padding: 24px 28px 28px;
+}
+
+.screenshot-content h4 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 1.15rem;
+}
+
+.screenshot-content p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.feedback-card {
+  background: #f8fafc;
+  border-radius: 26px;
+  padding: 26px 30px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.feedback-card h4 {
+  margin: 0 0 14px;
+  color: #111827;
+  font-size: 1.15rem;
+}
+
+.feedback-card ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.feedback-card li {
+  margin-bottom: 8px;
+  color: #334155;
+  line-height: 1.65;
+}
+
+.feedback-card li:last-child {
+  margin-bottom: 0;
+}
+
+.iteration-summary-card {
+  margin-top: 8px;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 900px) {
+  .iteration-section {
+    margin-top: 56px;
+  }
+
+  .iteration-note {
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .before-after-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .screenshot-placeholder {
+    min-height: 240px;
+  }
+
+  .feedback-card {
+    padding: 24px;
+  }
+
+  .iteration-summary-card {
+    margin-bottom: 48px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2774,6 +2979,172 @@
       </div>
     </section>
 
+    <!-- Iterative Refinement: Before & After -->
+<section class="section iteration-section">
+  <h2>Iterative Refinement: Before &amp; After</h2>
+
+  <p class="section-intro">
+    After the early alpha testing, we identified several usability problems from user feedback.
+    This section records how we planned to improve the prototype based on those comments.
+    The before-and-after screenshots will be added after the next interface update is completed.
+  </p>
+
+  <div class="iteration-note">
+    <div class="feature-icon">🔁</div>
+    <div>
+      <h3>Why This Section Matters</h3>
+      <p>
+        The purpose of this section is to show that PandaFit was not designed in one step.
+        We used user feedback to find problems, decide what should be changed, and prepare
+        clearer interface improvements for the next version.
+      </p>
+    </div>
+  </div>
+
+  <!-- Iteration 1 -->
+  <div class="iteration-block">
+    <div class="iteration-header">
+      <span class="iteration-tag">Iteration 1</span>
+      <h3>Language Switching Improvement</h3>
+      <p>
+        One user pointed out that the language setting was not complete enough. Although the
+        option existed, some interface text still remained in the original language. This could
+        make the app less friendly for bilingual users.
+      </p>
+    </div>
+
+    <div class="before-after-grid">
+
+      <div class="before-after-card">
+        <div class="screenshot-placeholder before-placeholder">
+          <div>
+            <span class="screenshot-label">Before</span>
+            <p>Screenshot Placeholder</p>
+            <small>Incomplete language switching</small>
+          </div>
+        </div>
+
+        <div class="screenshot-content">
+          <h4>Before</h4>
+          <p>
+            The profile page included a language option, but not all key interface labels
+            changed after switching language.
+          </p>
+        </div>
+      </div>
+
+      <div class="before-after-card">
+        <div class="screenshot-placeholder after-placeholder">
+          <div>
+            <span class="screenshot-label">After</span>
+            <p>Screenshot Placeholder</p>
+            <small>Clearer bilingual display</small>
+          </div>
+        </div>
+
+        <div class="screenshot-content">
+          <h4>After</h4>
+          <p>
+            The updated version will make the main navigation labels and profile settings
+            clearer for both English and Chinese users.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="feedback-card">
+      <h4>User Feedback and Design Response</h4>
+      <ul>
+        <li><strong>User feedback:</strong> User 3 could not fully switch from English to Chinese.</li>
+        <li><strong>Problem identified:</strong> The language setting was visible but not fully functional.</li>
+        <li><strong>Design response:</strong> Improve bilingual labels on the profile page, navigation, and key task pages.</li>
+        <li><strong>Expected impact:</strong> Make PandaFit easier to understand for users with different language preferences.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Iteration 2 -->
+  <div class="iteration-block">
+    <div class="iteration-header">
+      <span class="iteration-tag">Iteration 2</span>
+      <h3>Task Sorting Improvement</h3>
+      <p>
+        Another user mentioned that the task list was not arranged clearly. Without a clear
+        order, users may not know which task should be completed first, especially when they
+        have several exercise tasks in one day.
+      </p>
+    </div>
+
+    <div class="before-after-grid">
+
+      <div class="before-after-card">
+        <div class="screenshot-placeholder before-placeholder">
+          <div>
+            <span class="screenshot-label">Before</span>
+            <p>Screenshot Placeholder</p>
+            <small>Tasks without clear order</small>
+          </div>
+        </div>
+
+        <div class="screenshot-content">
+          <h4>Before</h4>
+          <p>
+            Tasks were displayed as a general list. The order was not clear enough for users
+            who wanted to plan their workout time.
+          </p>
+        </div>
+      </div>
+
+      <div class="before-after-card">
+        <div class="screenshot-placeholder after-placeholder">
+          <div>
+            <span class="screenshot-label">After</span>
+            <p>Screenshot Placeholder</p>
+            <small>Tasks sorted by time or category</small>
+          </div>
+        </div>
+
+        <div class="screenshot-content">
+          <h4>After</h4>
+          <p>
+            The updated version will organise tasks more clearly by time, category, or priority,
+            so users can follow their daily plan more easily.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="feedback-card">
+      <h4>User Feedback and Design Response</h4>
+      <ul>
+        <li><strong>User feedback:</strong> User 4 found the daily task list a little confusing.</li>
+        <li><strong>Problem identified:</strong> The task order did not clearly support daily planning.</li>
+        <li><strong>Design response:</strong> Add clearer task grouping, time order, or category labels.</li>
+        <li><strong>Expected impact:</strong> Help users understand what to do next with less effort.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="research-paper-card iteration-summary-card">
+    <h3>What We Learned from These Iterations</h3>
+
+    <p>
+      These two changes show how user testing helped us notice problems that were not obvious
+      during development. The feedback was not about adding more features, but about making
+      existing features easier to understand and use.
+    </p>
+
+    <p>
+      For the next version of PandaFit, we will focus on improving clarity, reducing confusion,
+      and making the main user flow smoother for beginner student users.
+    </p>
+  </div>
+</section>
+
+
+    
     <!-- NEW -->
     <section class="section">
       <h2>Accessibility & Inclusiveness</h2>
