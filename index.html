@@ -993,6 +993,149 @@
   }
 }
 
+    .architecture-section {
+  margin-top: 72px;
+}
+
+.architecture-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  padding: 24px 28px;
+  margin: 32px 0 40px;
+}
+
+.architecture-note h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+.architecture-note p {
+  margin: 0;
+  line-height: 1.7;
+  color: #c7d2e8;
+}
+
+.architecture-diagram-card {
+  background: #f8fafc;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+  margin-bottom: 40px;
+}
+
+.architecture-placeholder {
+  min-height: 420px;
+  background:
+    linear-gradient(135deg, rgba(31, 79, 216, 0.06), rgba(16, 185, 129, 0.06)),
+    repeating-linear-gradient(
+      45deg,
+      #f3f6fb,
+      #f3f6fb 16px,
+      #e7edf5 16px,
+      #e7edf5 32px
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 36px;
+  border: 1px dashed #cbd5e1;
+}
+
+.architecture-placeholder div {
+  max-width: 560px;
+}
+
+.architecture-icon {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.architecture-placeholder p {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #334155;
+}
+
+.architecture-placeholder small {
+  display: block;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.architecture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 56px;
+}
+
+.architecture-info-card {
+  background: #f8fafc;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.architecture-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: #e8f3ff;
+  color: #1f4fd8;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.architecture-info-card h3 {
+  margin: 0 0 12px;
+  color: #111827;
+}
+
+.architecture-info-card p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.architecture-summary-card {
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 900px) {
+  .architecture-section {
+    margin-top: 56px;
+  }
+
+  .architecture-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .architecture-placeholder {
+    min-height: 300px;
+    padding: 28px;
+  }
+
+  .architecture-note {
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .architecture-summary-card {
+    margin-bottom: 48px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2302,6 +2445,104 @@
       </div>
     </section>
 
+    <!-- System Architecture Diagram -->
+<section class="section architecture-section">
+  <h2>System Architecture Diagram</h2>
+
+  <p class="section-intro">
+    To explain how PandaFit works as a web-based prototype, we planned a simple system
+    architecture diagram. The diagram will show how users interact with the main interface,
+    how task and progress data are handled, and how different modules connect with each other.
+  </p>
+
+  <div class="architecture-note">
+    <div class="feature-icon">🧩</div>
+    <div>
+      <h3>Architecture Diagram Placeholder</h3>
+      <p>
+        The space below is prepared for our system architecture diagram. The final diagram
+        will be added after we finish organising the frontend pages, interaction logic,
+        and data flow of the current PandaFit prototype.
+      </p>
+    </div>
+  </div>
+
+  <div class="architecture-diagram-card">
+    <div class="architecture-placeholder">
+      <div>
+        <span class="architecture-icon">📐</span>
+        <p>System Architecture Diagram Placeholder</p>
+        <small>
+          This area will contain the final architecture image showing frontend modules,
+          interaction logic, and data handling.
+        </small>
+      </div>
+    </div>
+  </div>
+
+  <div class="architecture-grid">
+
+    <div class="architecture-info-card">
+      <span class="architecture-tag">Frontend</span>
+      <h3>Web App Interface</h3>
+      <p>
+        The frontend includes the main pages that users can directly interact with, such as
+        Home, Tasks, Rewards, Growth, and Profile. These pages are designed to support a
+        mobile-style experience for beginner fitness users.
+      </p>
+    </div>
+
+    <div class="architecture-info-card">
+      <span class="architecture-tag">Interaction</span>
+      <h3>User Actions and State Changes</h3>
+      <p>
+        Users can complete daily quests, manage exercise tasks, check rewards, view progress,
+        and adjust profile settings. These actions change the visible state of the prototype
+        and help users understand their progress.
+      </p>
+    </div>
+
+    <div class="architecture-info-card">
+      <span class="architecture-tag">Data Logic</span>
+      <h3>Task and Progress Data</h3>
+      <p>
+        The system needs to handle task records, check-in status, XP feedback, and progress
+        information. In the current prototype, these data flows are used to demonstrate the
+        core interaction logic of PandaFit.
+      </p>
+    </div>
+
+    <div class="architecture-info-card">
+      <span class="architecture-tag">Future Improvement</span>
+      <h3>Backend Synchronisation</h3>
+      <p>
+        The current version mainly focuses on demonstrating the main user flow. In the next
+        stage, we plan to improve backend synchronisation so that task, reward, and growth
+        data can be stored and updated more consistently.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="research-paper-card architecture-summary-card">
+    <h3>How the Architecture Supports Our Design Requirements</h3>
+
+    <p>
+      The architecture is designed around the three main needs identified in our research:
+      helping users start exercise more easily, giving feedback after small actions, and
+      showing progress over time. Therefore, the system connects daily tasks, reward feedback,
+      and progress visualisation into one continuous user flow.
+    </p>
+
+    <p>
+      At this stage, the architecture is still suitable for a student prototype. It focuses on
+      making the core interaction understandable and testable, rather than building a fully
+      commercial fitness platform.
+    </p>
+  </div>
+</section>
+
+    
    <section class="section">
   <h2>Current Build Status</h2>
   <div class="dark-card">
