@@ -724,6 +724,141 @@
     }
   }
 
+  .crazy-eight-section {
+  margin-top: 72px;
+}
+
+.crazy-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  padding: 24px 28px;
+  margin: 32px 0 40px;
+}
+
+.crazy-note h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+.crazy-note p {
+  margin: 0;
+  line-height: 1.7;
+  color: #c7d2e8;
+}
+
+.sketch-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 56px;
+}
+
+.sketch-card {
+  background: #f8fafc;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.sketch-placeholder {
+  height: 220px;
+  background:
+    linear-gradient(135deg, rgba(31, 79, 216, 0.05), rgba(16, 185, 129, 0.05)),
+    repeating-linear-gradient(
+      -45deg,
+      #f3f6fb,
+      #f3f6fb 14px,
+      #e7edf5 14px,
+      #e7edf5 28px
+    );
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+}
+
+.sketch-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  background: #e8f3ff;
+  color: #1f4fd8;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.sketch-placeholder p {
+  margin: 0 0 6px;
+  font-weight: 800;
+  color: #334155;
+}
+
+.sketch-placeholder small {
+  color: #64748b;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.sketch-content {
+  padding: 22px 22px 24px;
+}
+
+.sketch-content h3 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.sketch-content p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.crazy-summary-card {
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 1200px) {
+  .sketch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .sketch-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .crazy-note {
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .sketch-placeholder {
+    height: 200px;
+  }
+
+  .crazy-summary-card {
+    margin-bottom: 48px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1648,6 +1783,178 @@
           </p>
       </div>
     </section>
+
+    <!-- Crazy Eights Ideation -->
+<section class="section crazy-eight-section">
+  <h2>Crazy Eights Ideation</h2>
+
+  <p class="section-intro">
+    To explore more possible design directions before moving into the high-fidelity prototype,
+    we planned to use the Crazy Eights method. This section will show eight quick hand-drawn
+    interface ideas. The real sketch photos will be added later after our group completes the
+    drawing activity.
+  </p>
+
+  <div class="crazy-note">
+    <div class="feature-icon">✏️</div>
+    <div>
+      <h3>Sketch Evidence Placeholder</h3>
+      <p>
+        The boxes below are prepared for our eight hand-drawn sketches. Each sketch focuses
+        on one possible interaction idea for PandaFit, such as daily quests, rewards, progress
+        tracking, or beginner guidance. These placeholders will be replaced by real photos of
+        our sketches before the final submission.
+      </p>
+    </div>
+  </div>
+
+  <div class="sketch-grid">
+
+    <div class="sketch-card">
+      <div class="sketch-placeholder">
+        <div>
+          <span class="sketch-number">01</span>
+          <p>Sketch Placeholder</p>
+          <small>Today’s Quest Home Screen</small>
+        </div>
+      </div>
+      <div class="sketch-content">
+        <h3>Sketch 1: Today’s Quest</h3>
+        <p>
+          A home screen idea that gives users one clear daily task when they open the app.
+        </p>
+      </div>
+    </div>
+
+    <div class="sketch-card">
+      <div class="sketch-placeholder">
+        <div>
+          <span class="sketch-number">02</span>
+          <p>Sketch Placeholder</p>
+          <small>Task List Page</small>
+        </div>
+      </div>
+      <div class="sketch-content">
+        <h3>Sketch 2: Task List</h3>
+        <p>
+          A task management idea where users can view, add, complete, or delete exercise tasks.
+        </p>
+      </div>
+    </div>
+
+    <div class="sketch-card">
+      <div class="sketch-placeholder">
+        <div>
+          <span class="sketch-number">03</span>
+          <p>Sketch Placeholder</p>
+          <small>Reward / XP Feedback</small>
+        </div>
+      </div>
+      <div class="sketch-content">
+        <h3>Sketch 3: Reward Feedback</h3>
+        <p>
+          A completion feedback idea showing XP, level progress, or small rewards after exercise.
+        </p>
+      </div>
+    </div>
+
+    <div class="sketch-card">
+      <div class="sketch-placeholder">
+        <div>
+          <span class="sketch-number">04</span>
+          <p>Sketch Placeholder</p>
+          <small>Panda Growth Page</small>
+        </div>
+      </div>
+      <div class="sketch-content">
+        <h3>Sketch 4: Panda Growth</h3>
+        <p>
+          A playful growth idea where the panda changes as users keep completing tasks.
+        </p>
+      </div>
+    </div>
+
+    <div class="sketch-card">
+      <div class="sketch-placeholder">
+        <div>
+          <span class="sketch-number">05</span>
+          <p>Sketch Placeholder</p>
+          <small>Weekly Check-in</small>
+        </div>
+      </div>
+      <div class="sketch-content">
+        <h3>Sketch 5: Weekly Check-in</h3>
+        <p>
+          A weekly punch-card idea that helps users see how often they have exercised.
+        </p>
+      </div>
+    </div>
+
+    <div class="sketch-card">
+      <div class="sketch-placeholder">
+        <div>
+          <span class="sketch-number">06</span>
+          <p>Sketch Placeholder</p>
+          <small>Exercise Guide Page</small>
+        </div>
+      </div>
+      <div class="sketch-content">
+        <h3>Sketch 6: Exercise Guide</h3>
+        <p>
+          A beginner guidance idea showing simple exercise steps, images, and safety tips.
+        </p>
+      </div>
+    </div>
+
+    <div class="sketch-card">
+      <div class="sketch-placeholder">
+        <div>
+          <span class="sketch-number">07</span>
+          <p>Sketch Placeholder</p>
+          <small>Progress Trail</small>
+        </div>
+      </div>
+      <div class="sketch-content">
+        <h3>Sketch 7: Progress Trail</h3>
+        <p>
+          A long-term progress idea that shows how small daily actions build into visible growth.
+        </p>
+      </div>
+    </div>
+
+    <div class="sketch-card">
+      <div class="sketch-placeholder">
+        <div>
+          <span class="sketch-number">08</span>
+          <p>Sketch Placeholder</p>
+          <small>Profile &amp; Settings</small>
+        </div>
+      </div>
+      <div class="sketch-content">
+        <h3>Sketch 8: Profile &amp; Settings</h3>
+        <p>
+          A profile idea including user goals, personal preferences, and language settings.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="research-paper-card crazy-summary-card">
+    <h3>How We Will Use These Sketches</h3>
+
+    <p>
+      These sketches will help us compare different interface ideas before finalising the
+      prototype. After completing the hand-drawn sketches, we will discuss which ideas best
+      support beginner users and then connect them to our final feature design.
+    </p>
+
+    <p>
+      We expect the strongest ideas to be related to clear daily tasks, simple reward feedback,
+      visible progress, and beginner-friendly workout guidance.
+    </p>
+  </div>
+</section>
 
     <section class="section">
       <h2>Core Feature Concepts</h2>
