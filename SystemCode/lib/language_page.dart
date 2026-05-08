@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart'; // 导入全局 key
+import 'main.dart'; 
 
 class LanguagePage extends StatelessWidget {
   const LanguagePage({super.key});
