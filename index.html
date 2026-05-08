@@ -859,6 +859,140 @@
   }
 }
 
+  .alternatives-section {
+  margin-top: 72px;
+}
+
+.alternative-table-card {
+  background: #f8fafc;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+  margin: 32px 0 40px;
+}
+
+.alternative-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #111827;
+}
+
+.alternative-table th {
+  background: #e8f3ff;
+  color: #1f4fd8;
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 0.92rem;
+}
+
+.alternative-table td {
+  padding: 18px 20px;
+  border-top: 1px solid #e2e8f0;
+  color: #334155;
+  line-height: 1.65;
+  vertical-align: top;
+}
+
+.alternative-table td strong {
+  color: #111827;
+}
+
+.selected-row {
+  background: #f0fdf4;
+}
+
+.selected-row td {
+  border-top: 1px solid #bbf7d0;
+}
+
+.alternative-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 56px;
+}
+
+.alternative-card {
+  background: #f8fafc;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.alternative-label {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: #e8f3ff;
+  color: #1f4fd8;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.selected-alternative-card {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.selected-label {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.alternative-card h3 {
+  margin: 0 0 14px;
+  color: #111827;
+}
+
+.alternative-card p {
+  margin: 0 0 14px;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.alternative-card p:last-child {
+  margin-bottom: 0;
+}
+
+.alternatives-summary-card {
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 1100px) {
+  .alternative-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .alternative-table-card {
+    overflow-x: auto;
+  }
+
+  .alternative-table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .alternatives-section {
+    margin-top: 56px;
+  }
+
+  .alternative-card {
+    padding: 24px;
+  }
+
+  .alternative-cards {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .alternatives-summary-card {
+    margin-bottom: 48px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1956,6 +2090,170 @@
   </div>
 </section>
 
+    <!-- Design Alternatives Comparison -->
+<section class="section alternatives-section">
+  <h2>Design Alternatives Comparison</h2>
+
+  <p class="section-intro">
+    After reviewing our research findings and planning the Crazy Eights sketches, we compared
+    several possible directions for PandaFit. Instead of directly choosing one design idea, we
+    discussed different ways the system could support beginner student users. This helped us
+    decide which direction was more suitable for our target users.
+  </p>
+
+  <div class="alternative-table-card">
+    <table class="alternative-table">
+      <thead>
+        <tr>
+          <th>Alternative</th>
+          <th>Main Idea</th>
+          <th>Strengths</th>
+          <th>Limitations</th>
+          <th>Decision</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <strong>A. Coach-led Training Planner</strong>
+          </td>
+          <td>
+            Users follow workout plans created by coaches or instructors.
+          </td>
+          <td>
+            Provides professional guidance and clear training structure.
+          </td>
+          <td>
+            It depends too much on coach input and may feel less playful for students who just
+            want a light daily motivation tool.
+          </td>
+          <td>
+            Not selected as the main direction.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>B. Social Competition Fitness App</strong>
+          </td>
+          <td>
+            Users compete with friends through rankings, challenges, and leaderboards.
+          </td>
+          <td>
+            Can motivate some users and make exercise feel more social.
+          </td>
+          <td>
+            It may create pressure for beginners or users with low confidence. Some students may
+            feel discouraged if they always rank lower than others.
+          </td>
+          <td>
+            Partly rejected. We kept the idea of encouragement, but avoided strong competition.
+          </td>
+        </tr>
+
+        <tr class="selected-row">
+          <td>
+            <strong>C. Personal Quest and Growth System</strong>
+          </td>
+          <td>
+            Users complete small daily quests, receive reward feedback, and see visible progress
+            over time.
+          </td>
+          <td>
+            Beginner-friendly, low-pressure, and directly supports clarity, motivation, and
+            long-term habit building.
+          </td>
+          <td>
+            It needs careful design so that rewards feel encouraging rather than repetitive or
+            stressful.
+          </td>
+          <td>
+            Selected as our final design direction.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alternative-cards">
+
+    <div class="alternative-card">
+      <span class="alternative-label">Alternative A</span>
+      <h3>Coach-led Training Planner</h3>
+
+      <p>
+        This idea focuses on professional workout plans. It could be useful for users who want
+        accurate training advice, but it does not fully match our project aim. Our target users
+        are mainly students and beginner gym users, so they may not need a very formal coaching
+        system at the early stage.
+      </p>
+
+      <p>
+        <strong>Why we did not choose it:</strong>
+        It is useful, but it feels more like a serious fitness tool than a playful experience.
+        It also requires more coach-side content and management.
+      </p>
+    </div>
+
+    <div class="alternative-card">
+      <span class="alternative-label">Alternative B</span>
+      <h3>Social Competition Fitness App</h3>
+
+      <p>
+        This idea uses rankings, friend challenges, and leaderboards to motivate users.
+        At first, we thought this could make the app more exciting. However, after thinking
+        about our users, we realised that competition may not always be suitable for beginners.
+      </p>
+
+      <p>
+        <strong>Why we did not choose it:</strong>
+        Some students may feel stressed or embarrassed if their exercise level is lower than
+        others. This could go against our goal of creating a friendly and inclusive fitness
+        experience.
+      </p>
+    </div>
+
+    <div class="alternative-card selected-alternative-card">
+      <span class="alternative-label selected-label">Selected Direction</span>
+      <h3>Personal Quest and Growth System</h3>
+
+      <p>
+        This direction uses small daily quests, reward feedback, and visible progress to help
+        users build exercise habits. It does not ask users to compete with others or follow a
+        very strict training plan. Instead, it encourages them to complete small achievable
+        actions and gradually see their own improvement.
+      </p>
+
+      <p>
+        <strong>Why we chose it:</strong>
+        It best matches our research findings. Beginner student users need a clear starting
+        point, immediate encouragement, and long-term progress feedback. This direction also
+        fits PandaFit's playful and low-pressure design style.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="research-paper-card alternatives-summary-card">
+    <h3>Final Design Decision</h3>
+
+    <p>
+      We chose the Personal Quest and Growth System as the main direction for PandaFit.
+      Compared with a coach-led system or a competition-based app, this direction is more
+      suitable for beginner users because it focuses on self-progress rather than performance
+      pressure.
+    </p>
+
+    <p>
+      This decision directly shaped our core features: <strong>Daily Quest</strong>,
+      <strong>Reward Feedback</strong>, <strong>Progress Trail</strong>, and
+      <strong>beginner-friendly exercise guidance</strong>. These features were later developed
+      in our Figma prototype and web-based demo.
+    </p>
+  </div>
+</section>
+    
     <section class="section">
       <h2>Core Feature Concepts</h2>
       <div class="cards three-col">
