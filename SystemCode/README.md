@@ -1,25 +1,50 @@
-# PandaFit Flutter App
+# PandaFit - Flutter Web Fitness Application
 
-A friendly, standalone Flutter fitness & growth tracking app.
-No backend required — fully offline & local.
+A playful, human-centric fitness tracking app designed to build healthy habits with gamification features.
+Fully offline, no backend required, deployed as a web app on Vercel.
 
-## Teammate Setup Guide
-For teammate setup on a Mac and deployment to a real iPhone, see:
-- docs/ios_teammate_setup.md
+## Live Application URL
+https://panda-five-delta.vercel.app
 
-## What’s Included
-- Login & register (local only)
-- Home dashboard
-- Daily and project tasks
-- Today progress updates
-- Daily sign-in
-- Workout photo upload (local storage)
-- Badge and level display
-- User profile and logout
+## GitHub Repository
+https://yeli041029-hash.github.io/cpt208-c3-2-portfolio/
 
-## How to Run
-From this Flutter project directory:
+## Technologies Used
+- Flutter (Web)
+- Dart
+- Video Player
+- Custom CustomPaint Radar Chart
+- Local State Management
+- Vercel (Cloud Deployment)
+- GitHub
 
-```bash
-flutter pub get
-flutter run
+## Core Features (Playful & Must-Have)
+- Daily Check-in System
+- Level & EXP Growth System
+- Fitness Data Statistics (Radar Chart)
+- Daily Task Completion
+- Sports Buddy Unlock System
+
+## Setup Instructions
+1. Clone the project:
+   git clone https://github.com/Y2323442/pandafit-flutter-web.git
+
+2. Install dependencies:
+   flutter pub get
+
+3. Run locally:
+   flutter run -d chrome
+
+4. Build for web deployment:
+   flutter build web
+
+## AI Coding Logs
+All AI-generated core components (UI, radar chart, logic) are stored in:
+- /ailogs/
+
+## Project Structure
+- Home Dashboard
+- Award & Level System
+- Daily Task Bar
+- Fitness Stats (Radar Chart)
+- Local User Data Management
