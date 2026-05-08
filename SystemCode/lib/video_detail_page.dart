@@ -32,7 +32,6 @@ class VideoPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 视频区域
             _animatedEntrance(
               delay: 0,
               child: Container(
@@ -41,7 +40,6 @@ class VideoPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.grey[900],
                   borderRadius: BorderRadius.circular(30),
-                  // ✅ 修复路径
                   image: const DecorationImage(
                     image: AssetImage('images/running2.png'),
                     fit: BoxFit.cover,
@@ -59,7 +57,6 @@ class VideoPage extends StatelessWidget {
             ),
             const SizedBox(height: 25),
 
-            // 视频信息
             _animatedEntrance(
               delay: 200,
               child: const Column(
@@ -85,7 +82,6 @@ class VideoPage extends StatelessWidget {
             ),
             const SizedBox(height: 30),
 
-            // 训练步骤
             _animatedEntrance(
               delay: 400,
               child: const Text(
