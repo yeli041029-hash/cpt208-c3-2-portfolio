@@ -1366,6 +1366,44 @@
   color: #c7d2e8;
 }
 
+.ai-boundary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.ai-boundary-card {
+  background: #f8fafc;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.allowed-card {
+  border: 1px solid #bbf7d0;
+}
+
+.restricted-card {
+  border: 1px solid #fed7aa;
+}
+
+.ai-boundary-card h3 {
+  margin: 0 0 14px;
+  color: #111827;
+}
+
+.ai-boundary-card ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.ai-boundary-card li {
+  margin-bottom: 9px;
+  color: #334155;
+  line-height: 1.65;
+}
+
 .ai-process-timeline {
   display: grid;
   gap: 32px;
@@ -1550,10 +1588,8 @@
 }
 
 @media (max-width: 1000px) {
-  .ai-reflection-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .ai-boundary-grid,
+  .ai-reflection-grid,
   .verification-grid {
     grid-template-columns: 1fr;
   }
@@ -3445,28 +3481,57 @@
     </section>
 
 
-    <!-- Technical Reflection on AI-Assisted Development -->
+  <!-- Technical Reflection on Limited AI-Assisted Development -->
 <section class="section ai-reflection-section">
-  <h2>Technical Reflection on AI-Assisted Development</h2>
+  <h2>Technical Reflection on Limited AI-Assisted Development</h2>
 
   <p class="section-intro">
-    During the development of PandaFit, AI tools were used as supporting tools rather than
-    as the source of our design decisions. Our group still made the main decisions about
-    user research, feature selection, interaction design, and the human-centred direction of
-    the project.
+    In this project, AI was used only in a limited and supporting way. It was not used to
+    decide our project motivation, user research findings, design requirements, personas,
+    questionnaire results, or core human-centred design logic. These parts were completed
+    by our group through discussion, questionnaire analysis, user feedback, and prototype
+    evaluation.
   </p>
 
   <div class="ai-reflection-note">
     <div class="feature-icon">🤖</div>
     <div>
-      <h3>Our Position on AI Use</h3>
+      <h3>AI Use Boundary</h3>
       <p>
-        AI helped us work faster when dealing with code structure, debugging, wording, and
-        layout ideas. However, we did not use AI to replace our questionnaire results, user
-        feedback, or final design judgement. We treated AI suggestions as drafts that needed
-        to be checked and changed by the team.
+        We treated AI as a small technical helper, not as a designer or researcher. AI was
+        mainly used for debugging simple code problems, checking layout ideas, and improving
+        wording clarity in the portfolio. All final decisions were reviewed and edited by
+        our team before being used in PandaFit.
       </p>
     </div>
+  </div>
+
+  <div class="ai-boundary-grid">
+
+    <div class="ai-boundary-card allowed-card">
+      <span class="ai-tag selected-tag">Used in a limited way</span>
+      <h3>What AI Helped With</h3>
+
+      <ul>
+        <li>Checking small HTML / CSS layout issues in the portfolio website.</li>
+        <li>Debugging simple interface problems, such as card spacing or responsive layout.</li>
+        <li>Suggesting clearer wording for explanations after our group had written the main ideas.</li>
+        <li>Helping us organise technical reflection content in a more readable structure.</li>
+      </ul>
+    </div>
+
+    <div class="ai-boundary-card restricted-card">
+      <span class="ai-tag warning-tag">Not used for core work</span>
+      <h3>What AI Did Not Decide</h3>
+
+      <ul>
+        <li>AI did not choose the project topic or define the motivation of PandaFit.</li>
+        <li>AI did not create our questionnaire results or user testing feedback.</li>
+        <li>AI did not decide the three playful requirements.</li>
+        <li>AI did not replace our personas, journey map, design alternatives, or final design decisions.</li>
+      </ul>
+    </div>
+
   </div>
 
   <div class="ai-process-timeline">
@@ -3474,17 +3539,18 @@
     <div class="ai-step-card">
       <span class="ai-step-number">01</span>
       <h3>How AI Was Used</h3>
+
       <p>
-        We mainly used AI for code debugging, interface layout suggestions, small wording
-        improvements, and checking whether our explanations were clear enough for the
-        portfolio. For example, AI was helpful when we needed ideas for arranging cards,
-        improving responsive layout, or explaining a feature in simpler language.
+        Our use of AI was mainly limited to small technical and writing-support tasks.
+        For example, when the portfolio layout had spacing problems between cards, we used
+        AI suggestions to understand which CSS properties could be adjusted. When some
+        explanations sounded unclear, we used AI to help make the wording more readable.
       </p>
 
       <p>
-        The project motivation, user requirements, questionnaire analysis, personas, and
-        final feature choices were still based on our own group discussion and research
-        findings.
+        The content itself was still based on our own project work. The questionnaire data,
+        user needs, design direction, feature choices, and evaluation results came from our
+        group work rather than AI generation.
       </p>
     </div>
 
@@ -3493,38 +3559,40 @@
       <h3>Example Prompts Used</h3>
 
       <p>
-        Some prompts we used during development were similar to the following:
+        The prompts we used were focused on technical assistance or wording improvement.
+        They were not used to generate research findings or decide the design direction.
       </p>
 
       <div class="prompt-list">
         <div class="prompt-item">
-          <span>Prompt A</span>
+          <span>Prompt A · Layout debugging</span>
           <p>
-            “Help me create a mobile-style task card for a fitness web app, including task
-            title, progress, and a complete button.”
+            “This section has uneven spacing between cards. Can you help me adjust the CSS
+            margin and grid gap so it looks consistent with the rest of the portfolio?”
           </p>
         </div>
 
         <div class="prompt-item">
-          <span>Prompt B</span>
+          <span>Prompt B · Code structure checking</span>
           <p>
-            “Help debug why the task deletion function does not update the page immediately.”
+            “Help me check whether this HTML section is properly structured and whether the
+            class names are clear enough for future editing.”
           </p>
         </div>
 
         <div class="prompt-item">
-          <span>Prompt C</span>
+          <span>Prompt C · Portfolio wording refinement</span>
           <p>
-            “Suggest a simple way to present XP, level progress, and reward feedback for
-            beginner users.”
+            “Make this paragraph easier to understand for a university coursework portfolio,
+            but do not change the meaning or add new research claims.”
           </p>
         </div>
 
         <div class="prompt-item">
-          <span>Prompt D</span>
+          <span>Prompt D · Reflection organisation</span>
           <p>
-            “Check whether this portfolio paragraph sounds clear and suitable for a university
-            coursework portfolio.”
+            “Help me organise a short technical reflection about limited AI use, including
+            how the team checked the output and avoided relying on AI for design decisions.”
           </p>
         </div>
       </div>
@@ -3532,33 +3600,44 @@
 
     <div class="ai-step-card">
       <span class="ai-step-number">03</span>
-      <h3>How We Verified the Output</h3>
+      <h3>How We Verified AI Suggestions</h3>
 
       <p>
-        We did not directly copy AI-generated code without testing it. After using AI
-        suggestions, we checked whether the result matched our own requirements and whether
-        it worked in the actual prototype.
+        We did not directly accept AI output as final work. Each suggestion was checked by
+        the group before being added to the website or prototype. If the suggestion did not
+        match our design intention, we changed it or did not use it.
       </p>
 
       <div class="verification-grid">
         <div class="verification-item">
-          <strong>Requirement checked</strong>
-          <p>Daily task display and task management should be understandable for beginners.</p>
+          <strong>Code check</strong>
+          <p>
+            We tested the edited HTML and CSS in the browser to confirm that the layout worked
+            correctly on the portfolio website.
+          </p>
         </div>
 
         <div class="verification-item">
-          <strong>Function checked</strong>
-          <p>Buttons, navigation, task deletion, and page switching were manually tested.</p>
+          <strong>Requirement check</strong>
+          <p>
+            We checked whether any technical change still supported our three requirements:
+            clear starting point, positive feedback, and visible progress.
+          </p>
         </div>
 
         <div class="verification-item">
-          <strong>Design checked</strong>
-          <p>The implementation was compared with our Figma prototype and user feedback.</p>
+          <strong>Content check</strong>
+          <p>
+            We reviewed the wording to make sure it described our real work and did not add
+            unsupported claims or fake user research evidence.
+          </p>
         </div>
 
         <div class="verification-item">
-          <strong>User value checked</strong>
-          <p>We checked whether the feature supported clarity, motivation, or visible progress.</p>
+          <strong>Team decision check</strong>
+          <p>
+            Final content and design decisions were confirmed by group members, not by AI.
+          </p>
         </div>
       </div>
     </div>
@@ -3568,31 +3647,32 @@
       <h3>Ethical Considerations</h3>
 
       <p>
-        We considered several risks when using AI-generated code or AI-assisted writing.
-        The main concern was that AI suggestions may look correct but still create problems
-        for real users.
+        Because this is a human-centred computing project, we were careful not to let AI
+        weaken the link between our design and real user needs. We especially considered
+        accessibility, bias, pressure, and academic integrity.
       </p>
 
       <ul class="ai-ethics-list">
         <li>
           <strong>Accessibility:</strong>
-          We checked whether buttons, labels, and page sections were clear enough for users
-          to understand.
+          AI-suggested layouts were checked for readability, clear labels, and responsive
+          display. We did not use a layout only because it looked visually attractive.
         </li>
         <li>
           <strong>Bias:</strong>
-          We avoided assuming that all users are already confident or experienced in fitness.
-          PandaFit is mainly designed for beginners.
+          We avoided AI assumptions that all users are already confident, motivated, or
+          experienced in fitness. PandaFit is mainly for beginner student users.
         </li>
         <li>
-          <strong>Over-pressure:</strong>
-          We tried not to design reward systems that make users feel guilty or stressed if
-          they miss a day.
+          <strong>User pressure:</strong>
+          We avoided designing aggressive rankings or guilt-based streaks because our aim
+          is to create low-pressure motivation.
         </li>
         <li>
           <strong>Academic integrity:</strong>
-          We used AI as support, but the user research, design logic, and final decisions
-          remained our own group work.
+          We clearly separated AI assistance from our own research and design work. AI did
+          not create our questionnaire data, interview evidence, design alternatives, or
+          evaluation findings.
         </li>
       </ul>
     </div>
@@ -3602,32 +3682,29 @@
   <div class="ai-reflection-grid">
 
     <div class="ai-small-card">
-      <span class="ai-tag">Useful</span>
-      <h3>What AI Helped With</h3>
+      <span class="ai-tag">Small support</span>
+      <h3>Useful for Technical Fixes</h3>
       <p>
-        AI was useful for quickly generating draft code structures, finding possible bugs,
-        and improving the clarity of portfolio wording. It helped us save time on small
-        technical problems.
+        AI was useful when we needed quick suggestions for CSS spacing, card layout, and
+        wording clarity. These tasks were small parts of the website building process.
       </p>
     </div>
 
     <div class="ai-small-card">
-      <span class="ai-tag warning-tag">Limited</span>
-      <h3>What AI Could Not Replace</h3>
+      <span class="ai-tag warning-tag">Not a replacement</span>
+      <h3>Not Used as Research</h3>
       <p>
-        AI could not replace our user research, questionnaire data, design judgement, or
-        understanding of student users. Some AI suggestions were too generic, so we had to
-        adjust them to fit PandaFit.
+        AI was not treated as a source of user research. Our insights came from questionnaire
+        responses, user journey analysis, product review, and early testing feedback.
       </p>
     </div>
 
     <div class="ai-small-card">
-      <span class="ai-tag selected-tag">Reflection</span>
-      <h3>What We Learned</h3>
+      <span class="ai-tag selected-tag">Team controlled</span>
+      <h3>Final Decisions by Group</h3>
       <p>
-        AI is helpful when used carefully, but it should not decide the direction of a
-        human-centred project. For PandaFit, the most important decisions still came from
-        user needs, testing feedback, and group discussion.
+        The team reviewed all AI-assisted content. We only kept suggestions that matched our
+        own design direction and the coursework requirements.
       </p>
     </div>
 
@@ -3637,29 +3714,24 @@
     <h3>AI Tool Documentation</h3>
 
     <p>
-      In the final reference list, we will document the AI tools that were actually used in
-      the project. This may include tools used for coding assistance, debugging, interface
-      wording, or video production. We will only list tools that our group really used.
-    </p>
-
-    <p>
-      Example format for the reference list:
+      Any AI tool that was actually used will be documented in the final reference list.
+      The citation will describe the limited purpose of use, such as debugging support,
+      layout suggestions, or wording refinement. We will not list AI as a source for user
+      research or design findings.
     </p>
 
     <div class="ai-reference-example">
       <p>
-        [1] OpenAI ChatGPT, accessed on 2026-05-xx, available at https://chat.openai.com/.
-        Used for coding assistance, debugging suggestions, and portfolio wording refinement.
+        [AI Tool Reference Example] OpenAI ChatGPT, accessed on 2026-05-xx, available at
+        https://chat.openai.com/. Used in a limited supporting role for HTML/CSS debugging,
+        portfolio wording refinement, and organising the AI-use reflection. Not used to
+        generate user research findings or decide the core design logic.
       </p>
 
       <p>
-        [2] GitHub Copilot, accessed on 2026-05-xx, available at
-        https://github.com/features/copilot. Used for code completion and development support.
-      </p>
-
-      <p>
-        [3] Figma, accessed on 2026-05-xx, available at https://www.figma.com/.
-        Used for creating low-fidelity and high-fidelity prototype screens.
+        [AI Tool Reference Example] GitHub Copilot, accessed on 2026-05-xx, available at
+        https://github.com/features/copilot. Used only for minor code completion and
+        development support. All code suggestions were reviewed and tested by the team.
       </p>
     </div>
   </div>
