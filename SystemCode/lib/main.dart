@@ -15,7 +15,7 @@ void main() async {
   runApp(const MyApp());
 }
 
-// 全局刷新用的key（重点）
+
 GlobalKey<_TrainQuestRootState> trainQuestRootKey = GlobalKey();
 
 class MyApp extends StatelessWidget {
@@ -66,7 +66,7 @@ class _TrainQuestRootState extends State<TrainQuestRoot> {
   }
 }
 
-// 下面 MainScreen 代码你原样保留，不用改
+
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key, required this.refresh});
   final VoidCallback refresh;
