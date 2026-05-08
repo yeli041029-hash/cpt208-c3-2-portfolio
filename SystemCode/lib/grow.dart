@@ -189,7 +189,7 @@ class _GrowPageState extends State<GrowPage> {
     );
   }
 
-  // ✅ 还原成你截图里的样子
+
   Widget _buildImageGallery() {
     return Stack(
       children: <Widget>[
