@@ -1340,7 +1340,254 @@
     margin-bottom: 48px;
   }
 }
+.ai-reflection-section {
+  margin-top: 72px;
+}
 
+.ai-reflection-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  padding: 24px 28px;
+  margin: 32px 0 40px;
+}
+
+.ai-reflection-note h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+.ai-reflection-note p {
+  margin: 0;
+  line-height: 1.7;
+  color: #c7d2e8;
+}
+
+.ai-process-timeline {
+  display: grid;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.ai-step-card {
+  position: relative;
+  background: #f8fafc;
+  border-radius: 28px;
+  padding: 32px 34px 32px 96px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.ai-step-number {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e8f3ff;
+  color: #1f4fd8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.ai-step-card h3 {
+  margin: 0 0 14px;
+  color: #111827;
+  font-size: 1.25rem;
+}
+
+.ai-step-card p {
+  margin: 0 0 14px;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.ai-step-card p:last-child {
+  margin-bottom: 0;
+}
+
+.prompt-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.prompt-item {
+  background: #eef6ff;
+  border-left: 4px solid #1f4fd8;
+  border-radius: 18px;
+  padding: 16px 18px;
+}
+
+.prompt-item span {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #1f4fd8;
+}
+
+.prompt-item p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.65;
+}
+
+.verification-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.verification-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.verification-item strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.verification-item p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.ai-ethics-list {
+  margin: 18px 0 0;
+  padding-left: 22px;
+}
+
+.ai-ethics-list li {
+  margin-bottom: 10px;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.ai-ethics-list li:last-child {
+  margin-bottom: 0;
+}
+
+.ai-reflection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 56px;
+}
+
+.ai-small-card {
+  background: #f8fafc;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.ai-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: #e8f3ff;
+  color: #1f4fd8;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.warning-tag {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.selected-tag {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.ai-small-card h3 {
+  margin: 0 0 12px;
+  color: #111827;
+}
+
+.ai-small-card p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.ai-reference-reminder-card {
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+.ai-reference-example {
+  background: #eef2f7;
+  border-radius: 20px;
+  padding: 18px 20px;
+  margin-top: 16px;
+}
+
+.ai-reference-example p {
+  margin: 0 0 12px;
+  color: #334155;
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.ai-reference-example p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  .ai-reflection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .verification-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-reflection-section {
+    margin-top: 56px;
+  }
+
+  .ai-reflection-note {
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .ai-step-card {
+    padding: 28px;
+  }
+
+  .ai-step-number {
+    position: static;
+    margin-bottom: 16px;
+  }
+
+  .ai-reflection-grid {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .ai-reference-reminder-card {
+    margin-bottom: 48px;
+  }
+}
+    
 </style>
 </head>
 <body>
@@ -3197,6 +3444,228 @@
       </div>
     </section>
 
+
+    <!-- Technical Reflection on AI-Assisted Development -->
+<section class="section ai-reflection-section">
+  <h2>Technical Reflection on AI-Assisted Development</h2>
+
+  <p class="section-intro">
+    During the development of PandaFit, AI tools were used as supporting tools rather than
+    as the source of our design decisions. Our group still made the main decisions about
+    user research, feature selection, interaction design, and the human-centred direction of
+    the project.
+  </p>
+
+  <div class="ai-reflection-note">
+    <div class="feature-icon">🤖</div>
+    <div>
+      <h3>Our Position on AI Use</h3>
+      <p>
+        AI helped us work faster when dealing with code structure, debugging, wording, and
+        layout ideas. However, we did not use AI to replace our questionnaire results, user
+        feedback, or final design judgement. We treated AI suggestions as drafts that needed
+        to be checked and changed by the team.
+      </p>
+    </div>
+  </div>
+
+  <div class="ai-process-timeline">
+
+    <div class="ai-step-card">
+      <span class="ai-step-number">01</span>
+      <h3>How AI Was Used</h3>
+      <p>
+        We mainly used AI for code debugging, interface layout suggestions, small wording
+        improvements, and checking whether our explanations were clear enough for the
+        portfolio. For example, AI was helpful when we needed ideas for arranging cards,
+        improving responsive layout, or explaining a feature in simpler language.
+      </p>
+
+      <p>
+        The project motivation, user requirements, questionnaire analysis, personas, and
+        final feature choices were still based on our own group discussion and research
+        findings.
+      </p>
+    </div>
+
+    <div class="ai-step-card">
+      <span class="ai-step-number">02</span>
+      <h3>Example Prompts Used</h3>
+
+      <p>
+        Some prompts we used during development were similar to the following:
+      </p>
+
+      <div class="prompt-list">
+        <div class="prompt-item">
+          <span>Prompt A</span>
+          <p>
+            “Help me create a mobile-style task card for a fitness web app, including task
+            title, progress, and a complete button.”
+          </p>
+        </div>
+
+        <div class="prompt-item">
+          <span>Prompt B</span>
+          <p>
+            “Help debug why the task deletion function does not update the page immediately.”
+          </p>
+        </div>
+
+        <div class="prompt-item">
+          <span>Prompt C</span>
+          <p>
+            “Suggest a simple way to present XP, level progress, and reward feedback for
+            beginner users.”
+          </p>
+        </div>
+
+        <div class="prompt-item">
+          <span>Prompt D</span>
+          <p>
+            “Check whether this portfolio paragraph sounds clear and suitable for a university
+            coursework portfolio.”
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-step-card">
+      <span class="ai-step-number">03</span>
+      <h3>How We Verified the Output</h3>
+
+      <p>
+        We did not directly copy AI-generated code without testing it. After using AI
+        suggestions, we checked whether the result matched our own requirements and whether
+        it worked in the actual prototype.
+      </p>
+
+      <div class="verification-grid">
+        <div class="verification-item">
+          <strong>Requirement checked</strong>
+          <p>Daily task display and task management should be understandable for beginners.</p>
+        </div>
+
+        <div class="verification-item">
+          <strong>Function checked</strong>
+          <p>Buttons, navigation, task deletion, and page switching were manually tested.</p>
+        </div>
+
+        <div class="verification-item">
+          <strong>Design checked</strong>
+          <p>The implementation was compared with our Figma prototype and user feedback.</p>
+        </div>
+
+        <div class="verification-item">
+          <strong>User value checked</strong>
+          <p>We checked whether the feature supported clarity, motivation, or visible progress.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-step-card">
+      <span class="ai-step-number">04</span>
+      <h3>Ethical Considerations</h3>
+
+      <p>
+        We considered several risks when using AI-generated code or AI-assisted writing.
+        The main concern was that AI suggestions may look correct but still create problems
+        for real users.
+      </p>
+
+      <ul class="ai-ethics-list">
+        <li>
+          <strong>Accessibility:</strong>
+          We checked whether buttons, labels, and page sections were clear enough for users
+          to understand.
+        </li>
+        <li>
+          <strong>Bias:</strong>
+          We avoided assuming that all users are already confident or experienced in fitness.
+          PandaFit is mainly designed for beginners.
+        </li>
+        <li>
+          <strong>Over-pressure:</strong>
+          We tried not to design reward systems that make users feel guilty or stressed if
+          they miss a day.
+        </li>
+        <li>
+          <strong>Academic integrity:</strong>
+          We used AI as support, but the user research, design logic, and final decisions
+          remained our own group work.
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="ai-reflection-grid">
+
+    <div class="ai-small-card">
+      <span class="ai-tag">Useful</span>
+      <h3>What AI Helped With</h3>
+      <p>
+        AI was useful for quickly generating draft code structures, finding possible bugs,
+        and improving the clarity of portfolio wording. It helped us save time on small
+        technical problems.
+      </p>
+    </div>
+
+    <div class="ai-small-card">
+      <span class="ai-tag warning-tag">Limited</span>
+      <h3>What AI Could Not Replace</h3>
+      <p>
+        AI could not replace our user research, questionnaire data, design judgement, or
+        understanding of student users. Some AI suggestions were too generic, so we had to
+        adjust them to fit PandaFit.
+      </p>
+    </div>
+
+    <div class="ai-small-card">
+      <span class="ai-tag selected-tag">Reflection</span>
+      <h3>What We Learned</h3>
+      <p>
+        AI is helpful when used carefully, but it should not decide the direction of a
+        human-centred project. For PandaFit, the most important decisions still came from
+        user needs, testing feedback, and group discussion.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="research-paper-card ai-reference-reminder-card">
+    <h3>AI Tool Documentation</h3>
+
+    <p>
+      In the final reference list, we will document the AI tools that were actually used in
+      the project. This may include tools used for coding assistance, debugging, interface
+      wording, or video production. We will only list tools that our group really used.
+    </p>
+
+    <p>
+      Example format for the reference list:
+    </p>
+
+    <div class="ai-reference-example">
+      <p>
+        [1] OpenAI ChatGPT, accessed on 2026-05-xx, available at https://chat.openai.com/.
+        Used for coding assistance, debugging suggestions, and portfolio wording refinement.
+      </p>
+
+      <p>
+        [2] GitHub Copilot, accessed on 2026-05-xx, available at
+        https://github.com/features/copilot. Used for code completion and development support.
+      </p>
+
+      <p>
+        [3] Figma, accessed on 2026-05-xx, available at https://www.figma.com/.
+        Used for creating low-fidelity and high-fidelity prototype screens.
+      </p>
+    </div>
+  </div>
+</section>
+
+    
     <section class="section">
       <h2>Next Steps</h2>
       <div class="dark-card">
