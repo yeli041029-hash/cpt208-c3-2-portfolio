@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-// 简易翻译（中英双语）
+
 class AppLocalization {
   static Map<String, String> en = {
     "Language": "Language",
@@ -30,7 +30,7 @@ class AppLocalization {
   }
 }
 
-// 全局语言状态
+
 class AppLang extends ChangeNotifier {
   String _code = "en";
   String get code => _code;
