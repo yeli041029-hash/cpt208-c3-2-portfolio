@@ -2013,6 +2013,202 @@ body {
 .mobile-warning-card p {
   color: #c7d2e8;
 }
+
+
+.evaluation-section {
+  margin-top: 72px;
+}
+
+.evaluation-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background:
+    linear-gradient(135deg, rgba(124,58,237,0.22), rgba(34,197,94,0.12)),
+    rgba(30,43,73,0.92);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 28px;
+  padding: 24px 28px;
+  margin: 32px 0 40px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+}
+
+.evaluation-note h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+.evaluation-note p {
+  margin: 0;
+  line-height: 1.7;
+  color: #c7d2e8;
+}
+
+.evaluation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.evaluation-card {
+  background: #f8fafc;
+  color: #18253d;
+  border-radius: 26px;
+  padding: 26px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.evaluation-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: #e8f3ff;
+  color: #1f4fd8;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.evaluation-card h3 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 1.2rem;
+}
+
+.evaluation-card p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.evaluation-board {
+  background: #f8fafc;
+  border-radius: 28px;
+  padding: 26px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+  margin-bottom: 40px;
+  overflow-x: auto;
+}
+
+.evaluation-board h3 {
+  margin: 0 0 20px;
+  color: #111827;
+  font-size: 1.25rem;
+}
+
+.result-row {
+  min-width: 920px;
+  display: grid;
+  grid-template-columns: 120px 190px 150px 1.4fr 1.4fr;
+  gap: 16px;
+  align-items: start;
+  padding: 16px 0;
+  border-top: 1px solid #e2e8f0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.result-row:first-of-type {
+  border-top: none;
+}
+
+.result-header {
+  padding-top: 0;
+  font-weight: 800;
+  color: #111827;
+  font-size: 0.9rem;
+}
+
+.participant-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #e8f3ff;
+  color: #1f4fd8;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.result-status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.result-status.success {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.result-status.warning {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.evaluation-insight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 56px;
+}
+
+.evaluation-insight-card {
+  background: #f8fafc;
+  color: #18253d;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.evaluation-insight-card h3 {
+  margin: 0 0 14px;
+  color: #111827;
+}
+
+.evaluation-insight-card ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.evaluation-insight-card li {
+  margin-bottom: 8px;
+  color: #334155;
+  line-height: 1.65;
+}
+
+.evaluation-summary-card {
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 1000px) {
+  .evaluation-grid,
+  .evaluation-insight-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .evaluation-section {
+    margin-top: 56px;
+  }
+
+  .evaluation-note {
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .evaluation-board {
+    padding: 22px;
+  }
+
+  .evaluation-summary-card {
+    margin-bottom: 48px;
+  }
+}
     
 </style>
 </head>
@@ -3614,71 +3810,168 @@ body {
       </div>
     </section>
 
-    <!-- NEW -->
-    <section class="section">
-      <h2>Evaluation Plan</h2>
-    
-      <div class="dark-card">
-        <h3>Overview</h3>
-        <p>
-          To evaluate the PandaFit system, we plan to test how usable and engaging the app is, as well as whether it actually helps improve users’ motivation to exercise. Instead of relying on a single method, we will combine user testing with feedback collection to get a more realistic understanding of how people interact with the app.
-        </p>
-    
-        <h3>Evaluation Objectives</h3>
-        <ul>
-          <li>To see whether users can easily understand and use the interface</li>
-          <li>To check if features like XP, levels, and mascot growth are motivating</li>
-          <li>To understand whether users are willing to keep using the app</li>
-          <li>To identify any confusing parts or usability issues</li>
-        </ul>
-    
-        <h3>Methods</h3>
-        <p>
-          The evaluation will be conducted through a combination of user testing, questionnaires, and observational studies.
-        </p>
-    
-        <ul>
-          <li><strong>Usability Testing:</strong> Participants will be asked to complete several basic tasks, such as adding a task, checking their progress, and switching between pages. During this process, we will observe how easily they can complete these actions.</li>
-    
-          <li><strong>Questionnaires:</strong> After testing, users will fill in a short questionnaire to share their opinions on usability and overall experience.</li>
-    
-          <li><strong>Short Interviews:</strong> We will also ask a few follow-up questions to better understand what users liked, what confused them, and whether they felt motivated by the system.</li>
-        </ul>
-    
-        <h3>Participants</h3>
-        <p>
-          We plan to recruit around 5–10 participants, mainly university students aged 18–25. This group matches our target users, as many of them are interested in fitness but may find it hard to stay consistent.
-        </p>
-    
-        <h3>Key Tasks</h3>
-        <p>
-          During testing, participants will be asked to:
-        <p>
-        <ul>
-          <li>Create and manage a task</li>
-          <li>View their progress and experience points</li>
-          <li>Navigate between the main pages (Home, Tasks, Rewards, Growth, Profile)</li>
-          <li>Check weekly activity or streak information</li>
-        </ul>
-    
-        <h3>Success Metrics</h3>
-        <p>
-          To measure the effectiveness of the system, we will look at:
-        <p>
-        <ul>
-          <li>Whether users can complete tasks successfully</li>
-          <li>How long it takes them to finish each task</li>
-          <li>Their satisfaction ratings from the questionnaire</li>
-          <li>Whether they feel more motivated after using the app</li>
-          <li>How often they interact with reward-related features</li>
-        </ul>
-    
-        <h3>Future Evaluation</h3>
-        <p>
-          In future versions, we would like to run longer-term testing to see if users continue using the app over time. We also plan to track usage data such as how often users log in or complete tasks, once the backend system is fully developed.
-        </p>
+    <section class="section evaluation-section">
+  <h2>Evaluation Method &amp; Testing Results</h2>
+
+  <p class="section-intro">
+    To evaluate the alpha version of PandaFit, we asked several university students to try
+    the main user flow and give short feedback. The aim was not to prove that the system was
+    perfect, but to find usability problems and understand whether the playful features were
+    clear and motivating for beginner users.
+  </p>
+
+  <div class="evaluation-note">
+    <div class="feature-icon">🧪</div>
+    <div>
+      <h3>Evaluation Overview</h3>
+      <p>
+        We used a lightweight usability testing method because this is a student prototype.
+        Participants were asked to complete core tasks, while we observed whether they could
+        understand the interface, complete actions, and explain what felt clear or confusing.
+      </p>
+    </div>
+  </div>
+
+  <div class="evaluation-grid">
+
+    <div class="evaluation-card">
+      <span class="evaluation-tag">Participants</span>
+      <h3>4 Student Testers</h3>
+      <p>
+        We collected feedback from four university students who match our target user group:
+        beginner or casual fitness users who may need clearer guidance and motivation.
+      </p>
+    </div>
+
+    <div class="evaluation-card">
+      <span class="evaluation-tag">Testing Method</span>
+      <h3>Task-based Testing</h3>
+      <p>
+        Users tried the main prototype flow, including checking daily tasks, viewing progress,
+        exploring reward feedback, and using profile or language settings.
+      </p>
+    </div>
+
+    <div class="evaluation-card">
+      <span class="evaluation-tag">Focus</span>
+      <h3>Clarity and Motivation</h3>
+      <p>
+        We focused on whether users could understand what to do first, whether feedback felt
+        encouraging, and which parts of the interface caused confusion.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="evaluation-board">
+    <h3>Testing Results Summary</h3>
+
+    <div class="result-row result-header">
+      <div>Participant</div>
+      <div>Task Focus</div>
+      <div>Result</div>
+      <div>Main Feedback</div>
+      <div>Design Response</div>
+    </div>
+
+    <div class="result-row">
+      <div>
+        <span class="participant-badge">User 1</span>
       </div>
-    </section>
+      <div>Find today’s challenge</div>
+      <div><span class="result-status success">Completed</span></div>
+      <div>
+        The daily challenge made the first step clear and reduced the feeling of not knowing
+        where to start.
+      </div>
+      <div>
+        Keep the daily task entry visible on the main flow.
+      </div>
+    </div>
+
+    <div class="result-row">
+      <div>
+        <span class="participant-badge">User 2</span>
+      </div>
+      <div>Check progress and reward feedback</div>
+      <div><span class="result-status success">Completed</span></div>
+      <div>
+        The progress and reward feedback made exercise feel more like a small achievement
+        instead of a chore.
+      </div>
+      <div>
+        Keep XP, level, and progress feedback as core playful features.
+      </div>
+    </div>
+
+    <div class="result-row">
+      <div>
+        <span class="participant-badge">User 3</span>
+      </div>
+      <div>Use language settings</div>
+      <div><span class="result-status warning">Partly completed</span></div>
+      <div>
+        The user found that the language switching function was not complete enough, because
+        some interface text still remained in English.
+      </div>
+      <div>
+        Improve bilingual labels on navigation and key profile pages.
+      </div>
+    </div>
+
+    <div class="result-row">
+      <div>
+        <span class="participant-badge">User 4</span>
+      </div>
+      <div>Manage daily tasks</div>
+      <div><span class="result-status warning">Partly completed</span></div>
+      <div>
+        The user felt that task organisation was confusing when planning daily exercise tasks.
+      </div>
+      <div>
+        Separate task management into a clearer task page with time, task name, and delete actions.
+      </div>
+    </div>
+  </div>
+
+  <div class="evaluation-insight-grid">
+
+    <div class="evaluation-insight-card">
+      <h3>What Worked Well</h3>
+      <ul>
+        <li>Users understood the idea of daily tasks quickly.</li>
+        <li>Reward and progress feedback helped make exercise feel more motivating.</li>
+        <li>The mobile-style layout matched the intended use case of daily fitness tracking.</li>
+      </ul>
+    </div>
+
+    <div class="evaluation-insight-card">
+      <h3>What Needed Improvement</h3>
+      <ul>
+        <li>Language switching needed clearer bilingual support.</li>
+        <li>Task management needed a more separate and organised page.</li>
+        <li>Some progress and reward connections could be made more obvious.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="research-paper-card evaluation-summary-card">
+    <h3>Evaluation Reflection</h3>
+
+    <p>
+      The evaluation helped us confirm that PandaFit’s main direction was understandable:
+      users could see the value of daily tasks, reward feedback, and visible progress. At the
+      same time, testing also revealed practical usability issues that we did not fully notice
+      during development.
+    </p>
+
+    <p>
+      The two most important issues, incomplete language switching and unclear task organisation,
+      directly led to our before-and-after interface refinements in the next section.
+    </p>
+  </div>
+</section>
 
     <!-- NEW -->
     <section class="section">
