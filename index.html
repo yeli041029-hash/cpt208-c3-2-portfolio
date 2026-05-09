@@ -32,6 +32,7 @@
     line-height: 1.6;
   }
 
+<style>
   .container {
     width: min(1120px, 92%);
     margin: 0 auto;
@@ -764,50 +765,35 @@
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
 }
 
-.sketch-placeholder {
-  height: 220px;
-  background:
-    linear-gradient(135deg, rgba(31, 79, 216, 0.05), rgba(16, 185, 129, 0.05)),
-    repeating-linear-gradient(
-      -45deg,
-      #f3f6fb,
-      #f3f6fb 14px,
-      #e7edf5 14px,
-      #e7edf5 28px
-    );
+.sketch-img-wrap {
+  width: 100%;
+  height: 230px;
+  background: #eef2f7;
+  overflow: hidden;
   border-bottom: 1px solid #e2e8f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 18px;
+}
+
+.sketch-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .sketch-number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   margin-bottom: 14px;
   background: #e8f3ff;
   color: #1f4fd8;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 0.04em;
-}
-
-.sketch-placeholder p {
-  margin: 0 0 6px;
-  font-weight: 800;
-  color: #334155;
-}
-
-.sketch-placeholder small {
-  color: #64748b;
-  font-size: 0.85rem;
-  line-height: 1.5;
 }
 
 .sketch-content {
@@ -836,6 +822,10 @@
   .sketch-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .sketch-img-wrap {
+    height: 260px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -850,8 +840,8 @@
     padding: 22px;
   }
 
-  .sketch-placeholder {
-    height: 200px;
+  .sketch-img-wrap {
+    height: 260px;
   }
 
   .crazy-summary-card {
@@ -2549,156 +2539,155 @@
       </div>
     </section>
 
-    <!-- Crazy Eights Ideation -->
+  <!-- Crazy Eights Ideation -->
 <section class="section crazy-eight-section">
   <h2>Crazy Eights Ideation</h2>
 
   <p class="section-intro">
-    To explore more possible design directions before moving into the high-fidelity prototype,
-    we planned to use the Crazy Eights method. This section will show eight quick hand-drawn
-    interface ideas. The real sketch photos will be added later after our group completes the
-    drawing activity.
+    To explore different interface possibilities before finalising the high-fidelity prototype,
+    our group used the Crazy Eights method. We quickly sketched eight possible screens for
+    PandaFit, including Home, Task List, Reward, Growth, Video Guide, Add Task, Fitness State,
+    and Profile Settings.
   </p>
 
   <div class="crazy-note">
     <div class="feature-icon">✏️</div>
     <div>
-      <h3>Sketch Evidence Placeholder</h3>
+      <h3>Hand-drawn Sketch Exploration</h3>
       <p>
-        The boxes below are prepared for our eight hand-drawn sketches. Each sketch focuses
-        on one possible interaction idea for PandaFit, such as daily quests, rewards, progress
-        tracking, or beginner guidance. These placeholders will be replaced by real photos of
-        our sketches before the final submission.
+        These sketches are not final UI screens. They were created as quick ideation sketches
+        to help us discuss possible interactions for beginner student users. The focus was on
+        making the app clearer, more motivating, and more playful without making it too complex.
       </p>
     </div>
   </div>
 
   <div class="sketch-grid">
 
+    <!-- Sketch 1 -->
     <div class="sketch-card">
-      <div class="sketch-placeholder">
-        <div>
-          <span class="sketch-number">01</span>
-          <p>Sketch Placeholder</p>
-          <small>Today’s Quest Home Screen</small>
-        </div>
+      <div class="sketch-img-wrap">
+        <img src="images/crazy-eight-01-home.jpg" alt="Crazy Eights sketch 1: Home overview screen">
       </div>
       <div class="sketch-content">
-        <h3>Sketch 1: Today’s Quest</h3>
+        <span class="sketch-number">01</span>
+        <h3>Home / Today Overview</h3>
         <p>
-          A home screen idea that gives users one clear daily task when they open the app.
+          This sketch explores the first screen users see after opening PandaFit. It includes
+          a welcome message, weekly sign-in goal, total check-in, daily task entry, and level
+          progress. The purpose is to let users quickly understand their current status.
         </p>
       </div>
     </div>
 
+    <!-- Sketch 2 -->
     <div class="sketch-card">
-      <div class="sketch-placeholder">
-        <div>
-          <span class="sketch-number">02</span>
-          <p>Sketch Placeholder</p>
-          <small>Task List Page</small>
-        </div>
+      <div class="sketch-img-wrap">
+        <img src="images/crazy-eight-02-task-list.jpg" alt="Crazy Eights sketch 2: Daily task list screen">
       </div>
       <div class="sketch-content">
-        <h3>Sketch 2: Task List</h3>
+        <span class="sketch-number">02</span>
+        <h3>Daily Task List</h3>
         <p>
-          A task management idea where users can view, add, complete, or delete exercise tasks.
+          This sketch focuses on daily task management. Users can see their planned exercise
+          tasks and use the add button to create a new task. This supports our idea of giving
+          users a clear starting point for daily exercise.
         </p>
       </div>
     </div>
 
+    <!-- Sketch 3 -->
     <div class="sketch-card">
-      <div class="sketch-placeholder">
-        <div>
-          <span class="sketch-number">03</span>
-          <p>Sketch Placeholder</p>
-          <small>Reward / XP Feedback</small>
-        </div>
+      <div class="sketch-img-wrap">
+        <img src="images/crazy-eight-03-reward-xp.jpg" alt="Crazy Eights sketch 3: Reward and XP feedback screen">
       </div>
       <div class="sketch-content">
-        <h3>Sketch 3: Reward Feedback</h3>
+        <span class="sketch-number">03</span>
+        <h3>Reward / XP Feedback</h3>
         <p>
-          A completion feedback idea showing XP, level progress, or small rewards after exercise.
+          This idea shows a reward page with level, EXP, sport buddy, task bar rewards, and
+          accumulated exercise points. It was used to explore how PandaFit can give users
+          immediate positive feedback after completing small actions.
         </p>
       </div>
     </div>
 
+    <!-- Sketch 4 -->
     <div class="sketch-card">
-      <div class="sketch-placeholder">
-        <div>
-          <span class="sketch-number">04</span>
-          <p>Sketch Placeholder</p>
-          <small>Panda Growth Page</small>
-        </div>
+      <div class="sketch-img-wrap">
+        <img src="images/crazy-eight-04-growth-streak.jpg" alt="Crazy Eights sketch 4: Growth and streak screen">
       </div>
       <div class="sketch-content">
-        <h3>Sketch 4: Panda Growth</h3>
+        <span class="sketch-number">04</span>
+        <h3>Growth / Streak Page</h3>
         <p>
-          A playful growth idea where the panda changes as users keep completing tasks.
+          This sketch includes streak days, a progress area, and today’s step record. It connects
+          to the idea of long-term growth, helping users see that small daily efforts can build
+          into visible progress over time.
         </p>
       </div>
     </div>
 
+    <!-- Sketch 5 -->
     <div class="sketch-card">
-      <div class="sketch-placeholder">
-        <div>
-          <span class="sketch-number">05</span>
-          <p>Sketch Placeholder</p>
-          <small>Weekly Check-in</small>
-        </div>
+      <div class="sketch-img-wrap">
+        <img src="images/crazy-eight-05-video-guide.jpg" alt="Crazy Eights sketch 5: Exercise video guide screen">
       </div>
       <div class="sketch-content">
-        <h3>Sketch 5: Weekly Check-in</h3>
+        <span class="sketch-number">05</span>
+        <h3>Exercise Video Guide</h3>
         <p>
-          A weekly punch-card idea that helps users see how often they have exercised.
+          This sketch explores a workout video page with a play area and exercise steps. It is
+          designed for beginner users who may need simple guidance before starting a workout,
+          such as stretching or interval training.
         </p>
       </div>
     </div>
 
+    <!-- Sketch 6 -->
     <div class="sketch-card">
-      <div class="sketch-placeholder">
-        <div>
-          <span class="sketch-number">06</span>
-          <p>Sketch Placeholder</p>
-          <small>Exercise Guide Page</small>
-        </div>
+      <div class="sketch-img-wrap">
+        <img src="images/crazy-eight-06-add-task.jpg" alt="Crazy Eights sketch 6: Add daily task screen">
       </div>
       <div class="sketch-content">
-        <h3>Sketch 6: Exercise Guide</h3>
+        <span class="sketch-number">06</span>
+        <h3>Add Daily Task</h3>
         <p>
-          A beginner guidance idea showing simple exercise steps, images, and safety tips.
+          This idea shows a simple form for adding a daily task, including a title and time
+          information. It helps users customise their own plan while keeping the interaction
+          simple and easy to understand.
         </p>
       </div>
     </div>
 
+    <!-- Sketch 7 -->
     <div class="sketch-card">
-      <div class="sketch-placeholder">
-        <div>
-          <span class="sketch-number">07</span>
-          <p>Sketch Placeholder</p>
-          <small>Progress Trail</small>
-        </div>
+      <div class="sketch-img-wrap">
+        <img src="images/crazy-eight-07-fitness-state.jpg" alt="Crazy Eights sketch 7: Fitness state chart screen">
       </div>
       <div class="sketch-content">
-        <h3>Sketch 7: Progress Trail</h3>
+        <span class="sketch-number">07</span>
+        <h3>Fitness State</h3>
         <p>
-          A long-term progress idea that shows how small daily actions build into visible growth.
+          This sketch uses a simple fitness state chart to show different aspects of progress,
+          such as strength, endurance, flexibility, and completion. It gives users a more visual
+          way to understand their current fitness condition.
         </p>
       </div>
     </div>
 
+    <!-- Sketch 8 -->
     <div class="sketch-card">
-      <div class="sketch-placeholder">
-        <div>
-          <span class="sketch-number">08</span>
-          <p>Sketch Placeholder</p>
-          <small>Profile &amp; Settings</small>
-        </div>
+      <div class="sketch-img-wrap">
+        <img src="images/crazy-eight-08-profile-settings.jpg" alt="Crazy Eights sketch 8: Profile and settings screen">
       </div>
       <div class="sketch-content">
-        <h3>Sketch 8: Profile &amp; Settings</h3>
+        <span class="sketch-number">08</span>
+        <h3>Profile / Settings</h3>
         <p>
-          A profile idea including user goals, personal preferences, and language settings.
+          This sketch includes user level, active status, XP, streak, language settings, and
+          support options. It supports personalisation and makes PandaFit easier to use for
+          users with different preferences.
         </p>
       </div>
     </div>
@@ -2706,21 +2695,22 @@
   </div>
 
   <div class="research-paper-card crazy-summary-card">
-    <h3>How We Will Use These Sketches</h3>
+    <h3>How These Sketches Influenced Our Design</h3>
 
     <p>
-      These sketches will help us compare different interface ideas before finalising the
-      prototype. After completing the hand-drawn sketches, we will discuss which ideas best
-      support beginner users and then connect them to our final feature design.
+      These sketches helped us compare different interface ideas before moving into the
+      high-fidelity prototype. We found that the strongest ideas were related to clear daily
+      tasks, reward feedback, visible growth, and beginner-friendly workout guidance.
     </p>
 
     <p>
-      We expect the strongest ideas to be related to clear daily tasks, simple reward feedback,
-      visible progress, and beginner-friendly workout guidance.
+      Based on this ideation stage, we decided to focus on Daily Task, Reward / XP Feedback,
+      Growth Tracking, Exercise Guidance, and Profile Settings in the later prototype. This
+      helped PandaFit stay simple, playful, and suitable for beginner student users.
     </p>
   </div>
 </section>
-
+    
     <!-- Design Alternatives Comparison -->
 <section class="section alternatives-section">
   <h2>Design Alternatives Comparison</h2>
