@@ -1621,6 +1621,54 @@
     margin-bottom: 48px;
   }
 }
+  .iteration-img-wrap {
+  width: 100%;
+  height: 520px;
+  background: #f8fafc;
+  overflow: hidden;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iteration-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #f8fafc;
+}
+
+.before-after-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.screenshot-content {
+  min-height: 170px;
+}
+
+.feedback-card {
+  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .iteration-img-wrap {
+    height: 420px;
+  }
+
+  .screenshot-content {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .iteration-img-wrap {
+    height: 360px;
+  }
+}
     
 </style>
 </head>
@@ -3275,9 +3323,9 @@
   <h2>Iterative Refinement: Before &amp; After</h2>
 
   <p class="section-intro">
-    After the early alpha testing, we identified several usability problems from user feedback.
-    This section records how we planned to improve the prototype based on those comments.
-    The before-and-after screenshots will be added after the next interface update is completed.
+    After early alpha testing, we identified several usability problems from user feedback.
+    This section shows two changes we made based on those comments: improving bilingual
+    navigation and making the task list clearer.
   </p>
 
   <div class="iteration-note">
@@ -3285,9 +3333,9 @@
     <div>
       <h3>Why This Section Matters</h3>
       <p>
-        The purpose of this section is to show that PandaFit was not designed in one step.
-        We used user feedback to find problems, decide what should be changed, and prepare
-        clearer interface improvements for the next version.
+        PandaFit was not designed in one step. We used user feedback to identify problems,
+        compare the old and updated interfaces, and make the prototype easier for beginner
+        student users to understand.
       </p>
     </div>
   </div>
@@ -3298,46 +3346,46 @@
       <span class="iteration-tag">Iteration 1</span>
       <h3>Language Switching Improvement</h3>
       <p>
-        One user pointed out that the language setting was not complete enough. Although the
-        option existed, some interface text still remained in the original language. This could
-        make the app less friendly for bilingual users.
+        During testing, one user noticed that the language setting existed, but the interface
+        did not fully change after switching language. This could make PandaFit less friendly
+        for users who prefer Chinese. We therefore improved the navigation labels and profile
+        page text to support clearer bilingual display.
       </p>
     </div>
 
     <div class="before-after-grid">
 
       <div class="before-after-card">
-        <div class="screenshot-placeholder before-placeholder">
-          <div>
-            <span class="screenshot-label">Before</span>
-            <p>Screenshot Placeholder</p>
-            <small>Incomplete language switching</small>
-          </div>
+        <div class="iteration-img-wrap">
+          <img 
+            src="images/iteration-language-before.jpg" 
+            alt="Before screenshot showing incomplete language switching in the profile page"
+          >
         </div>
 
         <div class="screenshot-content">
           <h4>Before</h4>
           <p>
-            The profile page included a language option, but not all key interface labels
-            changed after switching language.
+            The profile page had a language setting, but the bottom navigation still showed
+            English labels such as Home, Task, Award, Grow, and Me after switching language.
           </p>
         </div>
       </div>
 
       <div class="before-after-card">
-        <div class="screenshot-placeholder after-placeholder">
-          <div>
-            <span class="screenshot-label">After</span>
-            <p>Screenshot Placeholder</p>
-            <small>Clearer bilingual display</small>
-          </div>
+        <div class="iteration-img-wrap">
+          <img 
+            src="images/iteration-language-after.jpg" 
+            alt="After screenshot showing Chinese navigation labels after language switching"
+          >
         </div>
 
         <div class="screenshot-content">
           <h4>After</h4>
           <p>
-            The updated version will make the main navigation labels and profile settings
-            clearer for both English and Chinese users.
+            The updated version changes the main navigation labels into Chinese, including
+            首页, 任务, 奖励, 成长, and 我的. This makes the language setting more visible
+            and easier to understand.
           </p>
         </div>
       </div>
@@ -3347,10 +3395,10 @@
     <div class="feedback-card">
       <h4>User Feedback and Design Response</h4>
       <ul>
-        <li><strong>User feedback:</strong> User 3 could not fully switch from English to Chinese.</li>
-        <li><strong>Problem identified:</strong> The language setting was visible but not fully functional.</li>
-        <li><strong>Design response:</strong> Improve bilingual labels on the profile page, navigation, and key task pages.</li>
-        <li><strong>Expected impact:</strong> Make PandaFit easier to understand for users with different language preferences.</li>
+        <li><strong>User feedback:</strong> User 3 could not fully switch the interface from English to Chinese.</li>
+        <li><strong>Problem identified:</strong> The language option was visible, but some key interface labels were not updated.</li>
+        <li><strong>Design response:</strong> We improved the bilingual display of the bottom navigation and profile page.</li>
+        <li><strong>Expected impact:</strong> Users with different language preferences can understand the main navigation more easily.</li>
       </ul>
     </div>
   </div>
@@ -3359,48 +3407,48 @@
   <div class="iteration-block">
     <div class="iteration-header">
       <span class="iteration-tag">Iteration 2</span>
-      <h3>Task Sorting Improvement</h3>
+      <h3>Task List Clarity Improvement</h3>
       <p>
-        Another user mentioned that the task list was not arranged clearly. Without a clear
-        order, users may not know which task should be completed first, especially when they
-        have several exercise tasks in one day.
+        Another user mentioned that the task list was not arranged clearly. In the earlier
+        version, tasks appeared in a daily overview area, but the order and management logic
+        were not easy to follow. We updated the task page so that tasks are displayed in a
+        clearer list with time information and delete actions.
       </p>
     </div>
 
     <div class="before-after-grid">
 
       <div class="before-after-card">
-        <div class="screenshot-placeholder before-placeholder">
-          <div>
-            <span class="screenshot-label">Before</span>
-            <p>Screenshot Placeholder</p>
-            <small>Tasks without clear order</small>
-          </div>
+        <div class="iteration-img-wrap">
+          <img 
+            src="images/iteration-task-before.jpg" 
+            alt="Before screenshot showing daily tasks inside the home page overview"
+          >
         </div>
 
         <div class="screenshot-content">
           <h4>Before</h4>
           <p>
-            Tasks were displayed as a general list. The order was not clear enough for users
-            who wanted to plan their workout time.
+            Tasks were shown inside the home page together with other progress widgets. This
+            made it less clear where users should manage their daily tasks.
           </p>
         </div>
       </div>
 
       <div class="before-after-card">
-        <div class="screenshot-placeholder after-placeholder">
-          <div>
-            <span class="screenshot-label">After</span>
-            <p>Screenshot Placeholder</p>
-            <small>Tasks sorted by time or category</small>
-          </div>
+        <div class="iteration-img-wrap">
+          <img 
+            src="images/iteration-task-after.jpg" 
+            alt="After screenshot showing a clearer task list with time and delete buttons"
+          >
         </div>
 
         <div class="screenshot-content">
           <h4>After</h4>
           <p>
-            The updated version will organise tasks more clearly by time, category, or priority,
-            so users can follow their daily plan more easily.
+            The updated task page separates task management into its own screen. Each task
+            has a clear time, task name, and delete button, making the list easier to scan
+            and manage.
           </p>
         </div>
       </div>
@@ -3410,10 +3458,10 @@
     <div class="feedback-card">
       <h4>User Feedback and Design Response</h4>
       <ul>
-        <li><strong>User feedback:</strong> User 4 found the daily task list a little confusing.</li>
-        <li><strong>Problem identified:</strong> The task order did not clearly support daily planning.</li>
-        <li><strong>Design response:</strong> Add clearer task grouping, time order, or category labels.</li>
-        <li><strong>Expected impact:</strong> Help users understand what to do next with less effort.</li>
+        <li><strong>User feedback:</strong> User 4 found the daily task area a little confusing.</li>
+        <li><strong>Problem identified:</strong> Task information was mixed with other home page content, so task management was not clear enough.</li>
+        <li><strong>Design response:</strong> We created a clearer task list page with time labels, task names, and delete buttons.</li>
+        <li><strong>Expected impact:</strong> Users can find, read, and manage their exercise tasks with less effort.</li>
       </ul>
     </div>
   </div>
@@ -3422,18 +3470,17 @@
     <h3>What We Learned from These Iterations</h3>
 
     <p>
-      These two changes show how user testing helped us notice problems that were not obvious
-      during development. The feedback was not about adding more features, but about making
-      existing features easier to understand and use.
+      These two changes show that user testing helped us notice problems that were not
+      obvious during development. The feedback was not mainly about adding more features,
+      but about making existing features easier to understand and use.
     </p>
 
     <p>
-      For the next version of PandaFit, we will focus on improving clarity, reducing confusion,
-      and making the main user flow smoother for beginner student users.
+      For the next version of PandaFit, we will continue improving clarity, reducing
+      confusion, and making the main user flow smoother for beginner student users.
     </p>
   </div>
 </section>
-
 
     
     <!-- NEW -->
