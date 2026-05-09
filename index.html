@@ -1448,6 +1448,48 @@
   margin-bottom: 0;
 }
 
+.ai-case-section {
+  margin: 34px 0 24px;
+}
+
+.ai-case-section h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 1.45rem;
+}
+
+.ai-case-section p {
+  margin: 0;
+  color: #c7d2e8;
+  line-height: 1.7;
+  max-width: 980px;
+}
+
+.poa-block {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-top: 16px;
+}
+
+.poa-label {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: #e8f3ff;
+  color: #1f4fd8;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.poa-block p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.7;
+}
+
 .prompt-list {
   display: grid;
   gap: 16px;
@@ -3536,16 +3578,15 @@
     </section>
 
 
-  <!-- Technical Reflection on Limited AI-Assisted Development -->
+ <!-- Technical Reflection on Limited AI-Assisted Development -->
 <section class="section ai-reflection-section">
   <h2>Technical Reflection on Limited AI-Assisted Development</h2>
 
   <p class="section-intro">
-    In this project, AI was used only in a limited and supporting way. It was not used to
-    decide our project motivation, user research findings, design requirements, personas,
-    questionnaire results, or core human-centred design logic. These parts were completed
-    by our group through discussion, questionnaire analysis, user feedback, and prototype
-    evaluation.
+    In this project, AI was used only in a limited supporting role. It was not used to decide
+    our project motivation, user research findings, personas, questionnaire results, design
+    requirements, or core human-centred design logic. These parts were completed by our group
+    through discussion, questionnaire analysis, prototype testing, and design iteration.
   </p>
 
   <div class="ai-reflection-note">
@@ -3553,10 +3594,10 @@
     <div>
       <h3>AI Use Boundary</h3>
       <p>
-        We treated AI as a small technical helper, not as a designer or researcher. AI was
-        mainly used for debugging simple code problems, checking layout ideas, and improving
-        wording clarity in the portfolio. All final decisions were reviewed and edited by
-        our team before being used in PandaFit.
+        We treated AI as a small technical assistant rather than a designer or researcher.
+        AI was mainly used for generating an initial technical development prompt, checking
+        layout ideas, and helping us organise technical explanations. All AI outputs were
+        reviewed, selected, and modified by our team before being used in PandaFit.
       </p>
     </div>
   </div>
@@ -3568,10 +3609,10 @@
       <h3>What AI Helped With</h3>
 
       <ul>
-        <li>Checking small HTML / CSS layout issues in the portfolio website.</li>
-        <li>Debugging simple interface problems, such as card spacing or responsive layout.</li>
-        <li>Suggesting clearer wording for explanations after our group had written the main ideas.</li>
-        <li>Helping us organise technical reflection content in a more readable structure.</li>
+        <li>Drafting an initial development prompt for the PandaFit Flutter prototype.</li>
+        <li>Helping us organise technical requirements such as local storage and page structure.</li>
+        <li>Checking small HTML / CSS layout problems in the portfolio website.</li>
+        <li>Improving the wording of technical reflection after our group had written the main ideas.</li>
       </ul>
     </div>
 
@@ -3580,102 +3621,127 @@
       <h3>What AI Did Not Decide</h3>
 
       <ul>
-        <li>AI did not choose the project topic or define the motivation of PandaFit.</li>
-        <li>AI did not create our questionnaire results or user testing feedback.</li>
-        <li>AI did not decide the three playful requirements.</li>
-        <li>AI did not replace our personas, journey map, design alternatives, or final design decisions.</li>
+        <li>AI did not choose our project topic or define the motivation of PandaFit.</li>
+        <li>AI did not create our questionnaire data, user feedback, or evaluation results.</li>
+        <li>AI did not decide our personas, journey map, playful requirements, or design alternatives.</li>
+        <li>AI did not replace our final judgement about what should be included in the prototype.</li>
       </ul>
     </div>
 
   </div>
 
+  <div class="ai-case-section">
+    <h3>Two Concrete AI Use Cases</h3>
+    <p>
+      The following two examples explain how we used AI in practice. Each case follows the
+      structure required for reflection: Prompt, Output, and Action.
+    </p>
+  </div>
+
   <div class="ai-process-timeline">
 
+    <!-- Case 1 -->
     <div class="ai-step-card">
       <span class="ai-step-number">01</span>
-      <h3>How AI Was Used</h3>
+      <h3>Case 1: Generating an Initial Development Prompt for the Flutter Prototype</h3>
 
-      <p>
-        Our use of AI was mainly limited to small technical and writing-support tasks.
-        For example, when the portfolio layout had spacing problems between cards, we used
-        AI suggestions to understand which CSS properties could be adjusted. When some
-        explanations sounded unclear, we used AI to help make the wording more readable.
-      </p>
+      <div class="poa-block">
+        <span class="poa-label">P · Prompt</span>
+        <p>
+          We asked AI to help us prepare a development prompt for the PandaFit system:
+          “Create a technical development prompt for a fully offline, mobile-first fitness
+          and growth tracking application named PandaFit using Flutter. The app should run
+          on Android, iOS, and Flutter Web. It should include local authentication, home
+          dashboard, daily task management, level and XP progression, unlockable panda
+          characters, radar chart visualisation, local image upload, personal profile page,
+          and settings. No external backend is required, and all data should be stored
+          locally.”
+        </p>
+      </div>
 
-      <p>
-        The content itself was still based on our own project work. The questionnaire data,
-        user needs, design direction, feature choices, and evaluation results came from our
-        group work rather than AI generation.
-      </p>
-    </div>
+      <div class="poa-block">
+        <span class="poa-label">O · Output</span>
+        <p>
+          AI produced a structured development prompt with project overview, core functional
+          requirements, and technical requirements. The output was useful because it helped us
+          organise the planned system features clearly. However, it was too broad at first and
+          included many functions that were difficult to finish within the coursework time.
+        </p>
+      </div>
 
-    <div class="ai-step-card">
-      <span class="ai-step-number">02</span>
-      <h3>Example Prompts Used</h3>
-
-      <p>
-        The prompts we used were focused on technical assistance or wording improvement.
-        They were not used to generate research findings or decide the design direction.
-      </p>
-
-      <div class="prompt-list">
-        <div class="prompt-item">
-          <span>Prompt A · Layout debugging</span>
-          <p>
-            “This section has uneven spacing between cards. Can you help me adjust the CSS
-            margin and grid gap so it looks consistent with the rest of the portfolio?”
-          </p>
-        </div>
-
-        <div class="prompt-item">
-          <span>Prompt B · Code structure checking</span>
-          <p>
-            “Help me check whether this HTML section is properly structured and whether the
-            class names are clear enough for future editing.”
-          </p>
-        </div>
-
-        <div class="prompt-item">
-          <span>Prompt C · Portfolio wording refinement</span>
-          <p>
-            “Make this paragraph easier to understand for a university coursework portfolio,
-            but do not change the meaning or add new research claims.”
-          </p>
-        </div>
-
-        <div class="prompt-item">
-          <span>Prompt D · Reflection organisation</span>
-          <p>
-            “Help me organise a short technical reflection about limited AI use, including
-            how the team checked the output and avoided relying on AI for design decisions.”
-          </p>
-        </div>
+      <div class="poa-block">
+        <span class="poa-label">A · Action</span>
+        <p>
+          We did not directly treat the AI output as our final system plan. We selected the
+          parts that matched our actual design requirements, such as daily tasks, XP, level
+          progress, profile information, and local storage. Some more complex ideas were
+          simplified or moved to future development. The final feature priorities were still
+          based on our questionnaire results, user journey map, and group discussion.
+        </p>
       </div>
     </div>
 
+    <!-- Case 2 -->
+    <div class="ai-step-card">
+      <span class="ai-step-number">02</span>
+      <h3>Case 2: Improving Portfolio Layout and Technical Explanation</h3>
+
+      <div class="poa-block">
+        <span class="poa-label">P · Prompt</span>
+        <p>
+          When we were improving the process portfolio, we asked AI for help with layout and
+          explanation problems. One example prompt was: “This portfolio section has uneven
+          spacing and the card width does not match the rest of the website. Help me identify
+          the HTML or CSS issue, but do not change the project content.” Another prompt was:
+          “Help me rewrite this technical reflection in a clearer university coursework style,
+          while keeping the meaning and making sure AI is described only as limited support.”
+        </p>
+      </div>
+
+      <div class="poa-block">
+        <span class="poa-label">O · Output</span>
+        <p>
+          AI suggested possible CSS changes and helped us identify that some layout problems
+          were related to section width, grid structure, or missing closing tags. It also
+          suggested a clearer structure for explaining AI use. Some suggestions were useful,
+          but some wording sounded too formal or too general for a student portfolio.
+        </p>
+      </div>
+
+      <div class="poa-block">
+        <span class="poa-label">A · Action</span>
+        <p>
+          We checked the HTML and CSS manually, then only kept the changes that fixed the
+          actual website problem. We also edited the reflection wording to make it more
+          accurate and closer to our real work. We removed or changed any sentence that made
+          AI sound like it had created our research findings or design decisions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Verification -->
     <div class="ai-step-card">
       <span class="ai-step-number">03</span>
       <h3>How We Verified AI Suggestions</h3>
 
       <p>
-        We did not directly accept AI output as final work. Each suggestion was checked by
-        the group before being added to the website or prototype. If the suggestion did not
-        match our design intention, we changed it or did not use it.
+        We did not directly accept AI output as final work. Every AI-assisted result was
+        checked by the group before being used in the system or portfolio.
       </p>
 
       <div class="verification-grid">
         <div class="verification-item">
           <strong>Code check</strong>
           <p>
-            We tested the edited HTML and CSS in the browser to confirm that the layout worked
-            correctly on the portfolio website.
+            We tested HTML, CSS, and prototype changes in the browser or app preview to make
+            sure the layout and navigation worked correctly.
           </p>
         </div>
 
         <div class="verification-item">
           <strong>Requirement check</strong>
           <p>
-            We checked whether any technical change still supported our three requirements:
+            We checked whether each feature still supported our three main requirements:
             clear starting point, positive feedback, and visible progress.
           </p>
         </div>
@@ -3683,28 +3749,28 @@
         <div class="verification-item">
           <strong>Content check</strong>
           <p>
-            We reviewed the wording to make sure it described our real work and did not add
-            unsupported claims or fake user research evidence.
+            We reviewed the wording to make sure it described our real design process and did
+            not add unsupported research claims.
           </p>
         </div>
 
         <div class="verification-item">
           <strong>Team decision check</strong>
           <p>
-            Final content and design decisions were confirmed by group members, not by AI.
+            Final design decisions were confirmed by group members, not by AI output.
           </p>
         </div>
       </div>
     </div>
 
+    <!-- Ethical considerations -->
     <div class="ai-step-card">
       <span class="ai-step-number">04</span>
       <h3>Ethical Considerations</h3>
 
       <p>
         Because this is a human-centred computing project, we were careful not to let AI
-        weaken the link between our design and real user needs. We especially considered
-        accessibility, bias, pressure, and academic integrity.
+        weaken the connection between our design and real user needs.
       </p>
 
       <ul class="ai-ethics-list">
@@ -3716,17 +3782,17 @@
         <li>
           <strong>Bias:</strong>
           We avoided AI assumptions that all users are already confident, motivated, or
-          experienced in fitness. PandaFit is mainly for beginner student users.
+          experienced in fitness. PandaFit is mainly designed for beginner student users.
         </li>
         <li>
           <strong>User pressure:</strong>
-          We avoided designing aggressive rankings or guilt-based streaks because our aim
-          is to create low-pressure motivation.
+          We avoided aggressive ranking or guilt-based streak systems because our aim is to
+          create low-pressure motivation.
         </li>
         <li>
           <strong>Academic integrity:</strong>
-          We clearly separated AI assistance from our own research and design work. AI did
-          not create our questionnaire data, interview evidence, design alternatives, or
+          We clearly separated AI assistance from our own research and design work. AI did not
+          create our questionnaire data, user interview evidence, design alternatives, or
           evaluation findings.
         </li>
       </ul>
@@ -3738,19 +3804,19 @@
 
     <div class="ai-small-card">
       <span class="ai-tag">Small support</span>
-      <h3>Useful for Technical Fixes</h3>
+      <h3>Useful for Technical Organisation</h3>
       <p>
-        AI was useful when we needed quick suggestions for CSS spacing, card layout, and
-        wording clarity. These tasks were small parts of the website building process.
+        AI helped us organise development requirements and technical explanations more clearly,
+        especially when describing the Flutter app structure and local data handling.
       </p>
     </div>
 
     <div class="ai-small-card">
-      <span class="ai-tag warning-tag">Not a replacement</span>
-      <h3>Not Used as Research</h3>
+      <span class="ai-tag warning-tag">Not research evidence</span>
+      <h3>Not Used as User Research</h3>
       <p>
-        AI was not treated as a source of user research. Our insights came from questionnaire
-        responses, user journey analysis, product review, and early testing feedback.
+        AI was not treated as a source of user insight. Our design direction came from
+        questionnaire responses, journey mapping, product review, and early testing feedback.
       </p>
     </div>
 
@@ -3759,7 +3825,7 @@
       <h3>Final Decisions by Group</h3>
       <p>
         The team reviewed all AI-assisted content. We only kept suggestions that matched our
-        own design direction and the coursework requirements.
+        actual prototype, user needs, and coursework requirements.
       </p>
     </div>
 
@@ -3769,22 +3835,22 @@
     <h3>AI Tool Documentation</h3>
 
     <p>
-      Any AI tool that was actually used will be documented in the final reference list.
-      The citation will describe the limited purpose of use, such as debugging support,
-      layout suggestions, or wording refinement. We will not list AI as a source for user
-      research or design findings.
+      Any AI tool that was actually used will be documented in the final reference list. The
+      citation will describe the limited purpose of use, such as technical prompt organisation,
+      debugging support, layout suggestions, or wording refinement. We will not list AI as a
+      source for user research or design findings.
     </p>
 
     <div class="ai-reference-example">
       <p>
-        [AI Tool Reference Example] OpenAI ChatGPT, accessed on 2026-04-28, available at
-        https://chat.openai.com/. Used in a limited supporting role for HTML/CSS debugging,
-        portfolio wording refinement, and organising the AI-use reflection. Not used to
-        generate user research findings or decide the core design logic.
+        [AI Tool Reference Example] OpenAI ChatGPT, accessed on 2026-05-xx, available at
+        https://chat.openai.com/. Used in a limited supporting role for organising development
+        prompts, HTML/CSS debugging, and portfolio wording refinement. Not used to generate
+        user research findings or decide the core design logic.
       </p>
 
       <p>
-        [AI Tool Reference Example] GitHub Copilot, accessed on 2026-05-02, available at
+        [AI Tool Reference Example] GitHub Copilot, accessed on 2026-05-xx, available at
         https://github.com/features/copilot. Used only for minor code completion and
         development support. All code suggestions were reviewed and tested by the team.
       </p>
