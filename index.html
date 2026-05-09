@@ -1794,6 +1794,122 @@
     margin-bottom: 48px;
   }
 }
+
+  .team-timeline-section {
+  margin-top: 72px;
+}
+
+.timeline-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  padding: 24px 28px;
+  margin: 32px 0 40px;
+}
+
+.timeline-note h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+.timeline-note p {
+  margin: 0;
+  line-height: 1.7;
+  color: #c7d2e8;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 56px;
+}
+
+.timeline-card {
+  background: #f8fafc;
+  color: #18253d;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: #e8f3ff;
+  color: #1f4fd8;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.final-timeline-card {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.final-tag {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.timeline-card h3 {
+  margin: 0 0 12px;
+  color: #111827;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.timeline-card p {
+  margin: 0 0 16px;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.timeline-card ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.timeline-card li {
+  margin-bottom: 8px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.timeline-card li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-summary-card {
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 900px) {
+  .team-timeline-section {
+    margin-top: 56px;
+  }
+
+  .timeline-note {
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .timeline-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .timeline-summary-card {
+    margin-bottom: 48px;
+  }
+}
     
 </style>
 </head>
@@ -4125,36 +4241,147 @@
       </div>
     </section>
 
-    <!-- NEW -->
-    <section class="section">
-      <h2>Team Timeline / Work Log</h2>
-      <p class="section-intro">
-        This section records weekly progress, responsibilities, and key development milestones.
+    <!-- Team Timeline / Work Log -->
+<section class="section team-timeline-section">
+  <h2>Team Timeline / Work Log</h2>
+
+  <p class="section-intro">
+    This section records how our group developed PandaFit from the early research stage to
+    the final Week 10 submission. The timeline shows our research, design, implementation,
+    evaluation, and final portfolio refinement process.
+  </p>
+
+  <div class="timeline-note">
+    <div class="feature-icon">📌</div>
+    <div>
+      <h3>Final Submission Status</h3>
+      <p>
+        By Week 10, our group had completed the main portfolio website, uploaded the project
+        materials to GitHub, and prepared the web-based PandaFit prototype for final
+        demonstration. The final stage focused on improving documentation, adding evidence
+        of iteration, and making the design process clearer for assessment.
       </p>
+    </div>
+  </div>
 
-      <div class="cards two-col">
-        <div class="card">
-          <h3>Week Log Entry 1 (Week 1–2)</h3>
-          <p>In the first two weeks, we focused on understanding the project requirements and defining our design direction. We explored common problems in fitness apps, such as complexity and lack of motivation, and decided to design a beginner-friendly solution. Initial user research was also conducted to support our ideas.</p>
-        </div>
+  <div class="timeline-grid">
 
-        <div class="card">
-          <h3>Week Log Entry 2 (Week 3–4)</h3>
-          <p>During this stage, we developed user journey maps and refined our core concept. We identified key user pain points like decision difficulty and lack of visible progress. Based on this, we proposed features such as the “Daily Challenge” system and mascot-based growth to improve engagement.</p>
-        </div>
+    <div class="timeline-card">
+      <span class="timeline-tag">Week 1–2</span>
+      <h3>Project Understanding and Topic Direction</h3>
+      <p>
+        In the first stage, we read the coursework requirements, discussed possible project
+        directions, and decided to focus on a beginner-friendly fitness support system. We
+        identified that many student users struggle with unclear starting points, weak
+        motivation, and difficulty maintaining exercise habits.
+      </p>
+      <ul>
+        <li>Confirmed the active lifestyle / Go Trainers direction.</li>
+        <li>Discussed target users and early problem space.</li>
+        <li>Started the process portfolio structure.</li>
+      </ul>
+    </div>
 
-        <div class="card">
-          <h3>Week Log Entry 3 (Week 5–6)</h3>
-          <p>We moved on to interface design and created low- and medium-fidelity prototypes using Figma. The main pages (Home, Tasks, Rewards, Growth, Profile) were structured, and we started integrating gamification elements into the user flow. Some design iterations were made based on team discussions.</p>
-        </div>
+    <div class="timeline-card">
+      <span class="timeline-tag">Week 3–4</span>
+      <h3>User Research and Journey Mapping</h3>
+      <p>
+        During this stage, we focused on understanding users before designing the system.
+        We created personas, analysed beginner fitness pain points, and developed a user
+        journey map to show where users feel confused, anxious, or unmotivated.
+      </p>
+      <ul>
+        <li>Created primary user personas.</li>
+        <li>Completed the experience journey map.</li>
+        <li>Started questionnaire research and academic review.</li>
+      </ul>
+    </div>
 
-        <div class="card">
-          <h3>Week Log Entry 4 (Week 7–8)</h3>
-          <p>In the latest phase, we implemented parts of the system and conducted early testing. Core features such as task management and navigation became functional. We collected user feedback and identified several issues, including incomplete language switching and unclear task sorting, which will be addressed in the next iteration.</p>
-        </div>
-      </div>
-    </section>
+    <div class="timeline-card">
+      <span class="timeline-tag">Week 5–6</span>
+      <h3>Requirements and Early Prototype Design</h3>
+      <p>
+        Based on the questionnaire findings, academic research, and product review, we
+        summarised key user needs and converted them into playful system requirements.
+        We also developed early interface ideas and began designing the main PandaFit pages
+        in Figma.
+      </p>
+      <ul>
+        <li>Defined three must-have playful requirements.</li>
+        <li>Created low- and medium-fidelity prototype ideas.</li>
+        <li>Compared different design alternatives.</li>
+      </ul>
+    </div>
 
+    <div class="timeline-card">
+      <span class="timeline-tag">Week 7–8</span>
+      <h3>Poster, Alpha System, and Initial Evaluation</h3>
+      <p>
+        In this stage, we prepared the poster and developed the alpha version of the system.
+        Core pages such as Home, Task, Reward, Growth, and Profile became more complete.
+        We also collected early feedback and found usability issues such as incomplete
+        language switching and unclear task organisation.
+      </p>
+      <ul>
+        <li>Prepared the Week 8 poster presentation.</li>
+        <li>Developed the alpha prototype and main navigation flow.</li>
+        <li>Recorded early testing notes and user feedback.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-card">
+      <span class="timeline-tag">Week 9</span>
+      <h3>Iteration and Technical Refinement</h3>
+      <p>
+        After early testing, we improved the prototype based on user feedback. The language
+        switching experience was refined, and the task management page became clearer with
+        task time, task name, and delete actions. We also documented the system architecture
+        to explain how the UI, controller logic, local storage, and refresh flow work together.
+      </p>
+      <ul>
+        <li>Added before-and-after iteration evidence.</li>
+        <li>Improved bilingual navigation and task list clarity.</li>
+        <li>Completed the system architecture diagram.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-card final-timeline-card">
+      <span class="timeline-tag final-tag">Week 10</span>
+      <h3>Final Submission Preparation</h3>
+      <p>
+        In the final week, we focused on polishing the portfolio and making sure the design
+        process was clearly documented. We added commercial product review, Crazy Eights
+        sketches, design alternatives, AI-use reflection, system architecture, and final
+        refinement discussion. We also uploaded the project code and portfolio materials to
+        GitHub for final submission.
+      </p>
+      <ul>
+        <li>Finalised the GitHub-hosted process portfolio.</li>
+        <li>Uploaded project code and supporting assets.</li>
+        <li>Checked links, images, demo access, and documentation completeness.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="research-paper-card timeline-summary-card">
+    <h3>Overall Team Progress</h3>
+
+    <p>
+      Our team process moved from research and problem understanding to interface design,
+      prototype implementation, user testing, and final iteration. The most important change
+      during the project was that PandaFit became more focused: instead of building a complex
+      fitness platform, we focused on a simple playful flow for beginner users.
+    </p>
+
+    <p>
+      The final version of the portfolio records this process through research evidence,
+      requirements, ideation sketches, design alternatives, system architecture, evaluation
+      notes, before-and-after iteration, and reflection. This helps show how our final
+      prototype was developed through a human-centred design process.
+    </p>
+  </div>
+</section>
   </div>
 </body>
 </html>
