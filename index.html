@@ -1010,6 +1010,21 @@
   margin-bottom: 40px;
 }
 
+.architecture-img-wrap {
+  width: 100%;
+  background: #f8fafc;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.architecture-img-wrap img {
+  width: 100%;
+  max-height: 760px;
+  object-fit: contain;
+  display: block;
+  border-radius: 18px;
+}
+
 .architecture-placeholder {
   min-height: 420px;
   background:
@@ -2928,99 +2943,97 @@
       </div>
     </section>
 
-    <!-- System Architecture Diagram -->
+  <!-- System Architecture Diagram -->
 <section class="section architecture-section">
   <h2>System Architecture Diagram</h2>
 
   <p class="section-intro">
-    To explain how PandaFit works as a web-based prototype, we planned a simple system
-    architecture diagram. The diagram will show how users interact with the main interface,
-    how task and progress data are handled, and how different modules connect with each other.
+    This diagram explains how the current PandaFit prototype is organised. It shows the
+    relationship between the interface pages, controller logic, custom components, local
+    data storage, and UI refresh process.
   </p>
 
   <div class="architecture-note">
     <div class="feature-icon">🧩</div>
     <div>
-      <h3>Architecture Diagram Placeholder</h3>
+      <h3>Architecture Overview</h3>
       <p>
-        The space below is prepared for our system architecture diagram. The final diagram
-        will be added after we finish organising the frontend pages, interaction logic,
-        and data flow of the current PandaFit prototype.
+        The system is divided into three main parts: the UI presentation layer, the business
+        logic and controller layer, and the model and data layer. This structure helps us
+        understand how user actions, task data, reward feedback, and progress information
+        are connected in the prototype.
       </p>
     </div>
   </div>
 
   <div class="architecture-diagram-card">
-    <div class="architecture-placeholder">
-      <div>
-        <span class="architecture-icon">📐</span>
-        <p>System Architecture Diagram Placeholder</p>
-        <small>
-          This area will contain the final architecture image showing frontend modules,
-          interaction logic, and data handling.
-        </small>
-      </div>
+    <div class="architecture-img-wrap">
+      <img 
+        src="images/system-architecture-diagram.png" 
+        alt="PandaFit system architecture diagram showing UI layer, controller layer, data layer, and UI refresh flow"
+      >
     </div>
   </div>
 
   <div class="architecture-grid">
 
     <div class="architecture-info-card">
-      <span class="architecture-tag">Frontend</span>
-      <h3>Web App Interface</h3>
+      <span class="architecture-tag">UI Layer</span>
+      <h3>Presentation Pages</h3>
       <p>
-        The frontend includes the main pages that users can directly interact with, such as
-        Home, Tasks, Rewards, Growth, and Profile. These pages are designed to support a
-        mobile-style experience for beginner fitness users.
+        The UI layer includes the main pages users interact with, such as Home, Task, Reward,
+        Growth, and Me. These pages present daily tasks, reward progress, growth records, and
+        user profile information.
       </p>
     </div>
 
     <div class="architecture-info-card">
-      <span class="architecture-tag">Interaction</span>
-      <h3>User Actions and State Changes</h3>
+      <span class="architecture-tag">Controller Layer</span>
+      <h3>Business Logic and State Control</h3>
       <p>
-        Users can complete daily quests, manage exercise tasks, check rewards, view progress,
-        and adjust profile settings. These actions change the visible state of the prototype
-        and help users understand their progress.
+        The AppController manages global state, page refresh, and main interaction logic.
+        It connects user actions with core functions such as level calculation, daily check-in,
+        task judgement, and XP calculation.
       </p>
     </div>
 
     <div class="architecture-info-card">
-      <span class="architecture-tag">Data Logic</span>
-      <h3>Task and Progress Data</h3>
+      <span class="architecture-tag">Component Layer</span>
+      <h3>Custom Components</h3>
       <p>
-        The system needs to handle task records, check-in status, XP feedback, and progress
-        information. In the current prototype, these data flows are used to demonstrate the
-        core interaction logic of PandaFit.
+        Some interface functions are supported by reusable components, such as the carousel,
+        sport buddy, radar chart, and pop-up feedback. These components help make the system
+        more visual and playful.
       </p>
     </div>
 
     <div class="architecture-info-card">
-      <span class="architecture-tag">Future Improvement</span>
-      <h3>Backend Synchronisation</h3>
+      <span class="architecture-tag">Data Layer</span>
+      <h3>Local Data Storage</h3>
       <p>
-        The current version mainly focuses on demonstrating the main user flow. In the next
-        stage, we plan to improve backend synchronisation so that task, reward, and growth
-        data can be stored and updated more consistently.
+        The current prototype uses local storage to save and read user-related data, including
+        level and XP, daily check-in date, weekly exercise frequency or hours, and task
+        completion status.
       </p>
     </div>
 
   </div>
 
   <div class="research-paper-card architecture-summary-card">
-    <h3>How the Architecture Supports Our Design Requirements</h3>
+    <h3>How the Architecture Supports PandaFit</h3>
 
     <p>
-      The architecture is designed around the three main needs identified in our research:
-      helping users start exercise more easily, giving feedback after small actions, and
-      showing progress over time. Therefore, the system connects daily tasks, reward feedback,
-      and progress visualisation into one continuous user flow.
+      This architecture supports the main user flow of PandaFit: users interact with the
+      interface, the controller updates task or progress data, the data layer saves the
+      result, and the UI refreshes to show the latest state.
     </p>
 
     <p>
-      At this stage, the architecture is still suitable for a student prototype. It focuses on
-      making the core interaction understandable and testable, rather than building a fully
-      commercial fitness platform.
+      For the current student prototype, this structure is suitable because it clearly
+      demonstrates how daily tasks, XP rewards, check-in records, and progress feedback are
+      handled. In the future, the local storage part could be replaced or extended with a
+      more complete backend database if the system needs user accounts and cloud
+      synchronisation.
     </p>
   </div>
 </section>
