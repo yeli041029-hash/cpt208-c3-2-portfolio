@@ -1711,6 +1711,89 @@
     height: 360px;
   }
 }
+
+.final-refinement-section {
+  margin-top: 72px;
+}
+
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 28px;
+  margin-bottom: 56px;
+}
+
+.risk-card {
+  background: #f8fafc;
+  color: #18253d;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.risk-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: #fff7ed;
+  color: #c2410c;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.risk-card h3 {
+  margin: 0 0 12px;
+  color: #111827;
+  font-size: 1.2rem;
+}
+
+.risk-card p {
+  margin: 0 0 16px;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.risk-response {
+  background: #eef6ff;
+  border-left: 4px solid #1f4fd8;
+  border-radius: 16px;
+  padding: 14px 16px;
+  color: #334155;
+  line-height: 1.65;
+}
+
+.selected-risk-card {
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+}
+
+.selected-risk-tag {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.final-reflection-card {
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 900px) {
+  .final-refinement-section {
+    margin-top: 56px;
+  }
+
+  .risk-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .final-reflection-card {
+    margin-bottom: 48px;
+  }
+}
     
 </style>
 </head>
@@ -3859,51 +3942,125 @@
 </section>
 
     
-    <section class="section">
-      <h2>Next Steps</h2>
-      <div class="dark-card">
-        <h3>Planned Progress</h3>
-        <ul class="mini-list">
-          <li>Complete unfinished features such as language switching and improve task sorting logic to make daily planning clearer and more structured.</li>
-          <li>Strengthen backend integration, including data storage and synchronization between tasks, rewards, and growth tracking.</li>
-          <li>Improve the clarity of key features, especially the connection between mascot growth and user progress, based on early testing feedback.</li>
-          <li>Refine the overall user experience by simplifying interactions and reducing confusion for first-time users.</li>
-          <li>Conduct further user testing with a larger group of participants to identify additional usability issues and validate design decisions.</li>
-        </ul>
-      </div>
-    </section>
+   <!-- Final Refinement and Limitations -->
+<section class="section final-refinement-section">
+  <h2>Final Refinement &amp; Limitations</h2>
 
-    <!-- NEW -->
-    <section class="section">
-      <h2>Risks & Next Iteration</h2>
-      <p class="section-intro">
-        This section records current limitations and the next iteration priorities after Week 8.
+  <p class="section-intro">
+    By the final submission stage, PandaFit has completed its main prototype flow, including
+    daily task management, reward feedback, progress tracking, profile settings, and bilingual
+    interface improvement. This section records the final refinements we made and the remaining
+    limitations that could be improved in a future version.
+  </p>
+
+  <div class="dark-card">
+    <h3>Final Polishing Before Submission</h3>
+    <ul class="mini-list">
+      <li>
+        We improved the language switching experience by updating the main navigation labels
+        from English to Chinese after user feedback.
+      </li>
+      <li>
+        We refined the task management flow by separating daily tasks into a clearer task page
+        with time, task name, and delete actions.
+      </li>
+      <li>
+        We added before-and-after screenshots to show how user feedback directly influenced
+        our interface iteration.
+      </li>
+      <li>
+        We documented the system architecture to explain how UI pages, controller logic, local
+        storage, and UI refresh are connected.
+      </li>
+      <li>
+        We completed the portfolio documentation, including research, requirements, design
+        alternatives, prototype evidence, evaluation reflection, and AI-use reflection.
+      </li>
+    </ul>
+  </div>
+
+  <div class="risk-grid">
+
+    <div class="risk-card">
+      <span class="risk-tag">Limitation 1</span>
+      <h3>Limited User Testing Scale</h3>
+      <p>
+        Our evaluation included early user feedback, which helped us identify issues such as
+        incomplete language switching and unclear task organisation. However, the number of
+        participants was still limited.
       </p>
 
-      <div class="cards two-col">
-        <div class="card">
-          <h3>Current Risks</h3>
-          <ul>
-            <li>Some features are still incomplete, such as the language switching function, which may affect usability for non-English users.</li>
-            <li>Task management is not fully optimized, as tasks are not always sorted in a clear or time-based order, which can make daily planning less intuitive.</li>
-            <li>The connection between mascot growth and user progress is not very obvious at first, so some users may not fully understand this feature.</li>
-            <li>Backend integration is still limited, and data synchronization between different modules (tasks, rewards, growth) is not fully stable yet.</li>
-            <li>Due to limited testing, current feedback is based on a small number of users, which may not fully represent all user needs.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Next Iteration Priorities</h3>
-          <ul>
-            <li>Complete missing features such as language switching and improve task sorting logic to support clearer daily planning.</li>
-            <li>Strengthen backend development to ensure stable data storage and smooth synchronization across all modules.</li>
-            <li>Improve the visual presentation of key features, especially making the mascot growth system more noticeable and easier to understand.</li>
-            <li>Refine UI details and interaction design to reduce confusion for first-time users.</li>
-            <li>Conduct more user testing with a wider group to gather more reliable feedback and guide further improvements.</li>
-          </ul>
-        </div>
+      <div class="risk-response">
+        <strong>Future improvement:</strong>
+        Test the prototype with more beginner student users to confirm whether the final version
+        is easier to understand and whether the playful features support longer-term motivation.
       </div>
-    </section>
+    </div>
+
+    <div class="risk-card">
+      <span class="risk-tag">Limitation 2</span>
+      <h3>Prototype-level Data Handling</h3>
+      <p>
+        The current system is suitable for demonstrating the main interaction flow. It uses
+        local data handling for task status, XP, level, check-in records, and profile information.
+      </p>
+
+      <div class="risk-response">
+        <strong>Future improvement:</strong>
+        A future version could connect to a more complete backend or cloud database if the app
+        needs multi-device synchronisation or long-term user accounts.
+      </div>
+    </div>
+
+    <div class="risk-card">
+      <span class="risk-tag">Limitation 3</span>
+      <h3>Reward and Growth Feedback Can Be Stronger</h3>
+      <p>
+        PandaFit includes XP, level, check-in, and growth-related concepts, but the connection
+        between completing a task and seeing long-term growth can still be made more obvious.
+      </p>
+
+      <div class="risk-response">
+        <strong>Future improvement:</strong>
+        Add clearer visual feedback after task completion, such as a small XP animation,
+        progress change, or mascot response.
+      </div>
+    </div>
+
+    <div class="risk-card selected-risk-card">
+      <span class="risk-tag selected-risk-tag">Final Focus</span>
+      <h3>Human-centred Design Priority</h3>
+      <p>
+        Our final priority was not to add as many features as possible, but to make the existing
+        core flow understandable for beginner users.
+      </p>
+
+      <div class="risk-response">
+        <strong>Design focus:</strong>
+        Start a task → complete a task → receive feedback → see progress. This simple flow
+        best matches our research findings and target users.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="research-paper-card final-reflection-card">
+    <h3>Final Reflection</h3>
+
+    <p>
+      Overall, PandaFit demonstrates our proposed solution for a playful, beginner-friendly
+      fitness companion. The final prototype focuses on clarity, low-pressure motivation, and
+      visible progress rather than complex professional training management.
+    </p>
+
+    <p>
+      The remaining limitations are acceptable for a student prototype, but they also show
+      clear directions for future development. If PandaFit continued beyond this coursework,
+      the next stage would focus on larger-scale testing, stronger data synchronisation, and
+      more expressive feedback between tasks, rewards, and growth.
+    </p>
+  </div>
+</section>
 
     <section class="section">
       <h2>References</h2>
