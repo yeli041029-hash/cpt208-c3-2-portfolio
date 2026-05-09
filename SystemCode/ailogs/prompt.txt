@@ -3,7 +3,7 @@ AI Development Prompt for PandaFit Flutter Application
 Project Overview:
 Develop a fully offline, mobile-first fitness and growth tracking application named PandaFit using the Flutter framework.
 The app must run natively on Android, iOS, and be compilable to Flutter Web for public deployment.
-No external backend or database server is required; all data is persisted locally on the device.
+All data is persisted locally on the device.
 
 Core Functional Requirements:
 1. Local user authentication including login, register, and logout with session persistence.
