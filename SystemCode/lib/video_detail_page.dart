@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
+import 'package:chewie/chewie.dart';
 
 class VideoPage extends StatelessWidget {
   const VideoPage({super.key});
@@ -6,6 +8,8 @@ class VideoPage extends StatelessWidget {
   static const Color bgColor = Color(0xFFF1F8E9);
   static const Color mainGreen = Color(0xFFD1E683);
   static const Color darkCard = Color(0xFF1A1C1E);
+
+  static const String videoUrl = 'assets/videos/workout.mp4';
 
   @override
   Widget build(BuildContext context) {
@@ -34,26 +38,7 @@ class VideoPage extends StatelessWidget {
           children: [
             _animatedEntrance(
               delay: 0,
-              child: Container(
-                height: 220,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.grey[900],
-                  borderRadius: BorderRadius.circular(30),
-                  image: const DecorationImage(
-                    image: AssetImage('images/running2.png'),
-                    fit: BoxFit.cover,
-                    opacity: 0.6,
-                  ),
-                ),
-                child: Center(
-                  child: Icon(
-                    Icons.play_circle_fill,
-                    color: mainGreen,
-                    size: 80,
-                  ),
-                ),
-              ),
+              child: _buildVideoPlayer(),
             ),
             const SizedBox(height: 25),
 
@@ -71,7 +56,7 @@ class VideoPage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "25 Minutes • High Intensity • 350 Kcal",
+                    "Recommended exercise routine",
                     style: TextStyle(
                       color: Colors.black45,
                       fontWeight: FontWeight.w600,
@@ -100,6 +85,24 @@ class VideoPage extends StatelessWidget {
 
             const SizedBox(height: 30),
           ],
+        ),
+      ),
+    );
+  }
+
+  // 视频播放器（已放大）
+  Widget _buildVideoPlayer() {
+    return Container(
+      height: 290, // 更大
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Colors.black,
+        borderRadius: BorderRadius.circular(30),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(30),
+        child: ChewieDemoPlayer(
+          videoUrl: videoUrl,
         ),
       ),
     );
@@ -185,5 +188,57 @@ class VideoPage extends StatelessWidget {
         );
       },
     );
+  }
+}
+
+
+class ChewieDemoPlayer extends StatefulWidget {
+  final String videoUrl;
+  const ChewieDemoPlayer({super.key, required this.videoUrl});
+
+  @override
+  State<ChewieDemoPlayer> createState() => _ChewieDemoPlayerState();
+}
+
+class _ChewieDemoPlayerState extends State<ChewieDemoPlayer> {
+  late VideoPlayerController _videoController;
+  late ChewieController _chewieController;
+
+  @override
+  void initState() {
+    super.initState();
+    _videoController = widget.videoUrl.startsWith('http')
+        ? VideoPlayerController.networkUrl(Uri.parse(widget.videoUrl))
+        : VideoPlayerController.asset(widget.videoUrl);
+
+    _chewieController = ChewieController(
+      videoPlayerController: _videoController,
+      autoPlay: false,
+      looping: false,
+      allowFullScreen: true,
+      showControls: true,
+
+
+      aspectRatio: 16 / 9,   
+
+      materialProgressColors: ChewieProgressColors(
+        playedColor: VideoPage.mainGreen,
+        handleColor: VideoPage.mainGreen,
+        backgroundColor: Colors.grey,
+        bufferedColor: Colors.white30,
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _videoController.dispose();
+    _chewieController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Chewie(controller: _chewieController);
   }
 }

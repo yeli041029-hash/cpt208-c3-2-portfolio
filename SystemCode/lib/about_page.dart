@@ -29,7 +29,7 @@ class _AboutUsPageState extends State<AboutUsPage> {
           children: [
             const SizedBox(height: 30),
 
-   
+            // 1. 动态呼吸 Logo
             _animatedEntrance(
               delay: 0,
               child: _buildAnimatedLogo(),
@@ -38,14 +38,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
             const Text("FitGrow v2.4.0", style: TextStyle(color: Colors.black38, fontWeight: FontWeight.bold)),
             const SizedBox(height: 40),
 
-           
+            // 2. 品牌故事卡片
             _animatedEntrance(
               delay: 200,
               child: _buildStoryCard(),
             ),
             const SizedBox(height: 30),
 
-
+            // 3. 成就/里程碑
             _animatedEntrance(
               delay: 400,
               child: _buildMilestones(),
@@ -60,7 +60,7 @@ class _AboutUsPageState extends State<AboutUsPage> {
     );
   }
 
- 
+  // --- 带呼吸效果的 Logo ---
   Widget _buildAnimatedLogo() {
     return TweenAnimationBuilder<double>(
       tween: Tween(begin: 0.95, end: 1.05),
@@ -84,7 +84,7 @@ class _AboutUsPageState extends State<AboutUsPage> {
     );
   }
 
- 
+  // --- 品牌故事卡片 ---
   Widget _buildStoryCard() {
     return Container(
       width: double.infinity,
@@ -112,7 +112,7 @@ class _AboutUsPageState extends State<AboutUsPage> {
     );
   }
 
-
+  // --- 里程碑（已按你的要求修改）---
   Widget _buildMilestones() {
     final milestones = [
       {"year": "2026.03", "event": "Project Started"},
@@ -177,7 +177,7 @@ class _AboutUsPageState extends State<AboutUsPage> {
     );
   }
 
-
+  // --- 辅助方法 ---
   Widget _buildIconButton(IconData icon, VoidCallback onTap) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
@@ -211,7 +211,7 @@ class _AboutUsPageState extends State<AboutUsPage> {
   }
 }
 
-
+// Q弹交互
 class _ScaleTap extends StatefulWidget {
   final Widget child;
   final VoidCallback onTap;

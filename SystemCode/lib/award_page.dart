@@ -689,7 +689,7 @@ class _RadarPainter extends CustomPainter {
     final radius = size.width * 0.32;
     const sides = 5;
     final angleStep = 2 * pi / sides;
-    const baseAngle = -pi / 2;
+    const baseAngle = -pi / 2 ;
 
     final normalized = List.generate(
       sides,
