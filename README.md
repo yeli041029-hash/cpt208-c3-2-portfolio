@@ -163,16 +163,36 @@ These changes show how user feedback directly influenced the final prototype.
 
 ## Technologies Used
 
-- Flutter Web
-- Dart
-- CustomPaint Radar Chart
-- Local State Management
-- Local Data Persistence
-- Video Player
-- Vercel Deployment
-- GitHub
-- GitHub Pages
-- HTML / CSS for the process portfolio
+**Core Framework & Language**
+Frontend Framework: Flutter 3.11.5+ (cross-platform, supports Web/Android/iOS)
+Programming Language: Dart 3.11.5+ (official Flutter language)
+Portfolio Development: HTML / CSS (process documentation website)
+
+**Core Functional Dependencies**
+shared_preferences: Local data persistence (user info, levels/XP, tasks, settings)
+image_picker: Camera/gallery access (workout photo upload & local storage)
+video_player: Fitness video playback (exercise guidance, task demo videos)
+provider: State management (cross-component data sharing, e.g., user state, task progress)
+intl: Internationalization (date formatting, bilingual support for Chinese/English)
+qr_flutter: QR code generation (optional: share fitness records, invite friends)
+flutter_blurhash: Image blur placeholders (optimize photo loading experience)
+http: Network requests (reserved for future cloud sync/version check features)
+cupertino_icons: iOS-style icons (cross-platform icon consistency)
+
+**UI/UX & Design**
+UI Guidelines: Material Design + Custom Panda Theme (soft green/black/white color scheme)
+Animations: Flutter native animations (page transitions, button feedback, level-up effects)
+Data Visualization: Custom radar chart (built with Flutter CustomPaint API)
+
+**Deployment & Development Tools**
+Web Deployment: Vercel, GitHub Pages (static web hosting)
+Version Control: Git + GitHub (code hosting, team collaboration)
+
+**Development Aids:**
+flutter_lints: Code style checking (unified team code standards)
+flutter_test: Unit & Widget testing (ensure feature stability)
+flutter_launcher_icons: Auto-generate app icons (consistent Android/iOS icons)
+
 
 ---
 
@@ -294,5 +314,6 @@ The current version is suitable for demonstrating the core human-centred design 
 **Project Name:** PandaFit  
 **Group:** C3-2  
 **University:** Xi’an Jiaotong-Liverpool University
+
 
 
