@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'app_controller.dart';
 import 'models/trainquest_models.dart';
-import 'dart:io';
+import 'dart:typed_data';
+import 'package:flutter/foundation.dart';
 
 class GrowPage extends StatefulWidget {
   const GrowPage({super.key});
@@ -19,7 +20,7 @@ class _GrowPageState extends State<GrowPage> {
   bool _loading = false;
   String? _error;
   final ImagePicker _picker = ImagePicker();
-  List<XFile> _images = [];
+  List<Uint8List> _imageBytesList = [];
 
   int _customStreak = 0;
   int _customSteps = 0;
@@ -53,7 +54,7 @@ class _GrowPageState extends State<GrowPage> {
   }
 
   Future<void> _pickImage() async {
-    if (_images.length >= 5) {
+    if (_imageBytesList.length >= 5) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("You can upload up to 5 pictures.")),
       );
@@ -61,14 +62,16 @@ class _GrowPageState extends State<GrowPage> {
     }
     final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
     if (image != null) {
+      Uint8List bytes = await image.readAsBytes();
       setState(() {
-        _images.add(image);
+        _imageBytesList.add(bytes);
       });
     }
   }
 
   Future<void> _editStreak() async {
-    final TextEditingController controller = TextEditingController(text: _customStreak.toString());
+    final TextEditingController controller =
+        TextEditingController(text: _customStreak.toString());
     await showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -92,7 +95,8 @@ class _GrowPageState extends State<GrowPage> {
   }
 
   Future<void> _editSteps() async {
-    final TextEditingController controller = TextEditingController(text: _customSteps.toString());
+    final TextEditingController controller =
+        TextEditingController(text: _customSteps.toString());
     await showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -127,12 +131,14 @@ class _GrowPageState extends State<GrowPage> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             children: [
               const SizedBox(height: 20),
-              const Text('Grow', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, letterSpacing: 1.2)),
+              const Text('Grow',
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, letterSpacing: 1.2)),
               const SizedBox(height: 8),
-              const Text('Track today, keep your streak alive, and upload workout photos.', style: TextStyle(color: Colors.black54)),
+              const Text('Track today, keep your streak alive, and upload workout photos.',
+                  style: TextStyle(color: Colors.black54)),
               const SizedBox(height: 25),
               if (_loading)
-                const Padding(padding: EdgeInsets.only(top: 80), child: Center(child: CircularProgressIndicator()))
+                const Padding(padding: EdgeInsets.only(top: 80), child: CircularProgressIndicator())
               else if (_error != null)
                 _buildErrorCard()
               else ...[
@@ -156,7 +162,9 @@ class _GrowPageState extends State<GrowPage> {
       decoration: BoxDecoration(
         color: darkCard,
         borderRadius: BorderRadius.circular(40),
-        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.2), blurRadius: 15, offset: const Offset(0, 8))],
+        boxShadow: [
+          BoxShadow(color: Colors.black.withOpacity(0.2), blurRadius: 15, offset: const Offset(0, 8))
+        ],
       ),
       child: Padding(
         padding: const EdgeInsets.all(30),
@@ -167,15 +175,18 @@ class _GrowPageState extends State<GrowPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text('Keep It Up', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold)),
+                  const Text('Keep It Up',
+                      style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 10),
                   _ScaleTap(
                     onTap: _editStreak,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Streak: $_customStreak days', style: TextStyle(color: mainGreen, fontSize: 16, fontWeight: FontWeight.bold)),
-                        Text('Stay consistent today.', style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 13)),
+                        Text('Streak: $_customStreak days',
+                            style: TextStyle(color: mainGreen, fontSize: 16, fontWeight: FontWeight.bold)),
+                        Text('Stay consistent today.',
+                            style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 13)),
                       ],
                     ),
                   ),
@@ -189,25 +200,24 @@ class _GrowPageState extends State<GrowPage> {
     );
   }
 
-
   Widget _buildImageGallery() {
     return Stack(
-      children: <Widget>[
+      children: [
         Container(
           height: 220,
           decoration: BoxDecoration(
             color: mainGreen.withOpacity(0.3),
             borderRadius: BorderRadius.circular(40),
           ),
-          child: _images.isEmpty
+          child: _imageBytesList.isEmpty
               ? const Center(child: Icon(Icons.image, size: 50, color: Colors.black26))
               : PageView.builder(
-                  itemCount: _images.length,
+                  itemCount: _imageBytesList.length,
                   itemBuilder: (context, index) {
                     return ClipRRect(
                       borderRadius: BorderRadius.circular(40),
-                      child: Image.file(
-                        File(_images[index].path),
+                      child: Image.memory(
+                        _imageBytesList[index],
                         fit: BoxFit.cover,
                       ),
                     );
@@ -226,7 +236,7 @@ class _GrowPageState extends State<GrowPage> {
                 borderRadius: BorderRadius.circular(30),
               ),
               child: const Row(
-                children: <Widget>[
+                children: [
                   Icon(Icons.add_a_photo, color: Colors.white, size: 18),
                   SizedBox(width: 8),
                   Text(
@@ -247,17 +257,22 @@ class _GrowPageState extends State<GrowPage> {
   }
 
   Widget _buildMetricsSection() {
-    return Column(children: [_buildTaskCard('Today steps', '$_customSteps', 'Keep walking and stay active.', true, onBadgeTap: _editSteps)]);
+    return Column(children: [
+      _buildTaskCard('Today steps', '$_customSteps', 'Keep walking and stay active.', true,
+          onBadgeTap: _editSteps)
+    ]);
   }
 
-  Widget _buildTaskCard(String title, String badgeText, String subtitle, bool right, {VoidCallback? onBadgeTap}) {
+  Widget _buildTaskCard(String title, String badgeText, String subtitle, bool right,
+      {VoidCallback? onBadgeTap}) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(color: mainGreen, borderRadius: BorderRadius.circular(30)),
       child: Container(
         padding: const EdgeInsets.all(15),
-        decoration: BoxDecoration(color: const Color(0xFFF9FFF0), borderRadius: BorderRadius.circular(25)),
+        decoration:
+            BoxDecoration(color: const Color(0xFFF9FFF0), borderRadius: BorderRadius.circular(25)),
         child: Row(
           children: [
             if (!right) _buildBadge(badgeText, onTap: onBadgeTap),
@@ -300,7 +315,8 @@ class _GrowPageState extends State<GrowPage> {
         children: [
           const Icon(Icons.error_outline, size: 42, color: Colors.redAccent),
           const SizedBox(height: 12),
-          Text(_error ?? 'Could not load grow data.', textAlign: TextAlign.center, style: const TextStyle(color: Colors.black54)),
+          Text(_error ?? 'Could not load grow data.',
+              textAlign: TextAlign.center, style: const TextStyle(color: Colors.black54)),
           const SizedBox(height: 16),
           ElevatedButton(
             style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
