@@ -1,27 +1,118 @@
-AI Development Prompt for PandaFit Flutter Application
+AI Development Prompt Log for PandaFit
 
-Project Overview:
-Develop a fully offline, mobile-first fitness and growth tracking application named PandaFit using the Flutter framework.
-The app must run natively on Android, iOS, and be compilable to Flutter Web for public deployment.
-All data is persisted locally on the device.
+This file records the main AI-assisted prompts used during the development and documentation of PandaFit. AI was used only in a limited supporting role for technical organisation, layout checking, and wording refinement. It was not used to decide the project motivation, user research findings, questionnaire results, personas, design requirements, or final human-centred design logic.
 
-Core Functional Requirements:
-1. Local user authentication including login, register, and logout with session persistence.
-2. Home dashboard displaying daily fitness progress, task overview, and user statistics.
-3. Daily task system with automatic completion detection, check-in mechanism, and XP reward calculation.
-4. Level and XP progression system with level cap control and experience point accumulation logic.
-5. Unlockable panda character assets that become available when reaching specific user levels.
-6. Custom radar chart visualization to present five-dimensional fitness statistics.
-7. Local image upload and storage for workout photos.
-8. Personal profile page showing user level, XP, activity streak, and editable fitness records.
-9. Settings module including notification options, language interface, account information, and about page.
+------------------------------------------------------------
+Case 1: Initial Development Prompt for PandaFit Prototype
+------------------------------------------------------------
 
-Technical Requirements:
-1. Use singleton pattern controller for global state management across all screens.
-2. Implement local data persistence using shared_preferences to store user profile, level, XP, tasks, check-in date, and fitness records.
-3. UI design must follow consistent color theme, rounded card layout, shadow effect, and unified spacing.
-4. Add entrance animation, button scale feedback, and smooth page navigation.
-5. Fully responsive mobile layout with no widget overflow, optimized for portrait mobile screen size.
-6. Clean code structure with separated models, screens, controllers, and asset resources.
-7. The entire project must be ready for Flutter Web build and deployment to Vercel or GitHub Pages.
-8. Ensure no critical runtime bugs, stable navigation, and complete interactive functions for demonstration.
+Prompt:
+Create a technical development prompt for a mobile-first fitness and growth tracking application named PandaFit using Flutter.
+
+Project context:
+PandaFit is a playful fitness companion for beginner university students. The system should help users build exercise habits through daily tasks, visible progress, XP rewards, check-in records, and profile settings. The prototype should be suitable for mobile use and also be deployable as a web-based demo.
+
+Please organise the development requirements into:
+1. Project overview
+2. Core functional requirements
+3. Main pages
+4. Data handling requirements
+5. Technical requirements
+6. UI style requirements
+
+The app should include:
+- Home dashboard showing daily fitness progress, task overview, and user statistics
+- Daily task management with task completion, deletion, check-in, and XP reward calculation
+- Level and XP progression system
+- Growth page showing streak, workout photo upload, and today’s steps
+- Profile page showing user level, XP, activity streak, language setting, notifications, account security, and about page
+- Local data persistence for user profile, level, XP, tasks, check-in date, and fitness records
+- A clean mobile-first layout with consistent colours, rounded cards, and simple navigation
+
+AI Output:
+AI generated a structured development prompt with project overview, functional requirements, and technical requirements. It helped us organise the possible system features and clarify what should be included in the prototype.
+
+Team Action:
+We did not directly use the AI output as the final product plan. Our team selected the parts that matched our user research and coursework scope, such as daily tasks, XP, level progress, profile settings, and local storage. Some suggestions were simplified because they were too broad for a student prototype. The final feature choices were still based on our questionnaire results, user journey map, and group discussion.
+
+------------------------------------------------------------
+Case 2: Portfolio Layout and CSS Debugging Prompt
+------------------------------------------------------------
+
+Prompt:
+I am improving the PandaFit process portfolio website. Some sections are not aligned with the main page width, and one module appears wider than the others.
+
+Please help me check what might cause this issue in HTML and CSS. Focus on:
+1. Whether the section is outside the main container
+2. Whether there is a missing closing div
+3. Whether duplicated style tags may break CSS parsing
+4. Whether the grid layout or card width causes the problem
+
+Do not change the project content. Only suggest possible structural or CSS fixes.
+
+AI Output:
+AI suggested that the issue might be caused by a duplicated style tag, a missing closing div in the Design Opportunities section, or a section being placed outside the main container. It also suggested checking whether the Crazy Eights section had been given a separate width setting.
+
+Team Action:
+We manually checked the HTML structure and found that some layout problems were related to the container structure and CSS organisation. We then corrected the relevant HTML/CSS while keeping the portfolio content unchanged. We only kept suggestions that matched the actual code problem.
+
+------------------------------------------------------------
+Case 3: Iterative Refinement Writing Prompt
+------------------------------------------------------------
+
+Prompt:
+Help me write a short portfolio section explaining two before-and-after interface improvements in PandaFit.
+
+Context:
+The first improvement is language switching. Before, the profile page included a language setting, but the bottom navigation still used English labels. After improvement, the navigation labels changed into Chinese.
+
+The second improvement is task list clarity. Before, daily tasks were mixed with the home page overview. After improvement, tasks are shown on a separate task page with time, task name, and delete actions.
+
+Please write the explanation in a normal student coursework style. Do not exaggerate the system. Focus on user feedback, problem identified, design response, and expected impact.
+
+AI Output:
+AI produced a draft explanation for the before-and-after iteration section, including user feedback, problem identified, design response, and expected impact.
+
+Team Action:
+We edited the draft to match our real screenshots and actual prototype changes. For example, we changed the wording from “task sorting” to “task list clarity” because the updated interface mainly shows a clearer task page rather than a complete sorting algorithm. We also checked that the explanation matched our real user feedback.
+
+------------------------------------------------------------
+Case 4: AI Use Reflection Prompt
+------------------------------------------------------------
+
+Prompt:
+Help me organise a short technical reflection about limited AI use in this project.
+
+The reflection should clearly explain:
+1. AI was only used as limited technical support
+2. AI did not decide the project topic, research findings, user requirements, personas, or design logic
+3. The team checked and edited all AI suggestions
+4. Two concrete examples should follow the structure: Prompt, Output, Action
+5. The writing should sound like a university student process portfolio, not like a professional company report
+
+AI Output:
+AI suggested a reflection structure with AI use boundary, two example cases, verification, ethical considerations, and AI tool documentation.
+
+Team Action:
+We adapted the structure to match the module requirement and our real work. We made sure the final portfolio clearly states that AI was not used to generate user research, questionnaire data, design alternatives, or evaluation findings. We also added the AI tools to the reference list as required.
+
+------------------------------------------------------------
+Summary of AI Use Boundary
+------------------------------------------------------------
+
+AI was used for:
+- Drafting technical development prompts
+- Organising code and feature requirements
+- Checking HTML/CSS layout issues
+- Improving clarity of portfolio wording
+- Structuring the AI-use reflection
+
+AI was not used for:
+- Choosing the project topic
+- Creating questionnaire results
+- Creating user testing feedback
+- Defining the core design logic
+- Replacing group discussion or design decisions
+- Fabricating evidence, photos, sketches, or evaluation results
+
+All AI-assisted outputs were reviewed, edited, and verified by the team before being included in the prototype or process portfolio.
