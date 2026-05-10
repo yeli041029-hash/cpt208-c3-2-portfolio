@@ -1,3 +1,4 @@
+
 # PandaFit - CPT208 Human-Centric Fitness Prototype
 
 PandaFit is a mobile-first playful fitness tracking prototype developed for the CPT208 Human-Centric Computing coursework.
@@ -210,6 +211,21 @@ flutter_test: Unit & Widget testing (ensure feature stability).
 
 flutter_launcher_icons: Auto-generate app icons (consistent Android/iOS icons).
 
+---
+
+## Data Handling
+PandaFit implements structured data handling and state management based on the system architecture.
+
+The **LocalReport** class centrally manages all user input and interaction data, including:
+- User profile information
+- Daily exercise tasks (add, update, delete, complete)
+- Task state synchronization
+- Local data persistence
+
+User inputs such as creating tasks, completing tasks, deleting tasks, and updating profile are captured from the UI layer. The system uses **JSON serialization** to convert data models and stores them securely via **SharedPreferences**, ensuring all user-generated data and interaction states are preserved between sessions.
+
+This class provides the core data management evidence that the system correctly processes, stores, and retrieves user input according to the design architecture.
+
 
 ---
 
@@ -331,6 +347,9 @@ The current version is suitable for demonstrating the core human-centred design 
 **Project Name:** PandaFit  
 **Group:** C3-2  
 **University:** Xi’an Jiaotong-Liverpool University
+
+
+
 
 
 
